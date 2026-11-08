@@ -1,0 +1,1299 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WISH LANGUAGE</title>
+<meta name="description" content="NCT WISH 팬을 위한 한일 언어 교류 공간. 멤버들의 진짜 일본어로 말투를 배워요.">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#8CCBF2">
+<link rel="icon" type="image/png" href="icons/icon-192.png">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="WISH LANG">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=Gaegu:wght@400;700&family=Noto+Sans+JP:wght@400;500;700&family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --desk-1:#BFE3FA; --desk-2:#E9F5FE; --dot:rgba(43,124,192,.10);
+  --win:#FFFFFF; --win-2:#F6FBFF; --ink:#1E2A44; --sub:#5F6B85;
+  --edge:#2B7CC0; --hard:rgba(43,124,192,.28);
+  --bar-1:#8CCBF2; --bar-2:#E3F3FD;
+  --primary:#2B7CC0; --on-primary:#FFFFFF;
+  --sky:#8CCBF2; --sky-l:#E3F3FD;
+  --peach:#FFB59E; --peach-l:#FFF1EB;
+  --pink:#FFB3D1; --pink-l:#FFF0F6;
+  --mint:#8FDCC2; --mint-l:#E8F8F2;
+  --butter:#FFDB7A; --butter-l:#FFF8E1;
+  --lav:#B9A6EC; --lav-l:#F0EBFC;
+  --grid:#DCEAF6; --margin:#FF9DB0; --badge:#F2546B;
+  --cloud:rgba(255,255,255,.85);
+  --sans:'Noto Sans KR', 'Apple SD Gothic Neo', 'Malgun Gothic', system-ui, sans-serif;
+  --ja:'Noto Sans JP', 'Hiragino Sans', 'Yu Gothic', 'Noto Sans KR', system-ui, sans-serif;
+  --pixel:'DotGothic16', 'Noto Sans JP', 'Noto Sans KR', monospace;
+  --hand:'Gaegu', 'Noto Sans KR', cursive;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme: dark;
+    --desk-1:#0E1A36; --desk-2:#1B2850; --dot:rgba(140,203,242,.10);
+    --win:#16213D; --win-2:#1B2847; --ink:#E7EEFB; --sub:#A4B1CC;
+    --edge:#6FB5EC; --hard:rgba(0,0,0,.45);
+    --bar-1:#2C5488; --bar-2:#1D3359;
+    --primary:#8CCBF2; --on-primary:#0E1A36;
+    --sky:#4C8FC4; --sky-l:#1E3358;
+    --peach:#C97C66; --peach-l:#3A2632;
+    --pink:#C5779A; --pink-l:#3A2340;
+    --mint:#4FA88C; --mint-l:#173A3A;
+    --butter:#C9A443; --butter-l:#3A3220;
+    --lav:#8C79C9; --lav-l:#2A2650;
+    --grid:#22335A; --margin:#A85A72; --badge:#F2546B;
+    --cloud:rgba(180,205,255,.10);
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --desk-1:#0E1A36; --desk-2:#1B2850; --dot:rgba(140,203,242,.10);
+  --win:#16213D; --win-2:#1B2847; --ink:#E7EEFB; --sub:#A4B1CC;
+  --edge:#6FB5EC; --hard:rgba(0,0,0,.45);
+  --bar-1:#2C5488; --bar-2:#1D3359;
+  --primary:#8CCBF2; --on-primary:#0E1A36;
+  --sky:#4C8FC4; --sky-l:#1E3358;
+  --peach:#C97C66; --peach-l:#3A2632;
+  --pink:#C5779A; --pink-l:#3A2340;
+  --mint:#4FA88C; --mint-l:#173A3A;
+  --butter:#C9A443; --butter-l:#3A3220;
+  --lav:#8C79C9; --lav-l:#2A2650;
+  --grid:#22335A; --margin:#A85A72; --badge:#F2546B;
+  --cloud:rgba(180,205,255,.10);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 16px)}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{
+  margin:0; color:var(--ink); font-family:var(--sans); font-size:16px; line-height:1.7;
+  background:
+    radial-gradient(var(--dot) 1px, transparent 1.4px) 0 0/18px 18px,
+    linear-gradient(180deg,var(--desk-1),var(--desk-2) 55%,var(--desk-1));
+  background-color:var(--desk-2);
+  padding-bottom:calc(160px + env(safe-area-inset-bottom,0px));
+  -webkit-font-smoothing:antialiased;
+}
+[lang="ja"]{font-family:var(--ja)}
+img,svg{max-width:100%}
+a{color:inherit}
+button{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--primary);outline-offset:2px;border-radius:6px}
+[hidden]{display:none!important}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.wrap{width:min(1120px,100% - 32px);margin-inline:auto}
+
+/* ---------- window ---------- */
+.win{background:var(--win);border:1.5px solid var(--edge);border-radius:12px;box-shadow:4px 4px 0 var(--hard);overflow:hidden;position:relative}
+.bar{display:flex;align-items:center;gap:10px;height:36px;padding:0 10px 0 14px;border-bottom:1.5px solid var(--edge);
+  background:linear-gradient(90deg,var(--bar-1),var(--bar-2));font-family:var(--pixel);font-size:15px;letter-spacing:.02em}
+.bar .ttl{flex:1;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar .ctl{display:flex;gap:4px}
+.bar .ctl i{width:20px;height:20px;border:1.5px solid var(--edge);border-radius:4px;background:var(--win);display:grid;place-items:center;font-style:normal;font-size:11px;line-height:1}
+.win[data-accent="pink"] .bar{background:linear-gradient(90deg,var(--pink),var(--pink-l))}
+.win[data-accent="peach"] .bar{background:linear-gradient(90deg,var(--peach),var(--peach-l))}
+.win[data-accent="mint"] .bar{background:linear-gradient(90deg,var(--mint),var(--mint-l))}
+.win[data-accent="butter"] .bar{background:linear-gradient(90deg,var(--butter),var(--butter-l))}
+.win[data-accent="lav"] .bar{background:linear-gradient(90deg,var(--lav),var(--lav-l))}
+.menu{display:flex;gap:18px;padding:4px 14px;border-bottom:1px solid var(--grid);font-size:13px;color:var(--sub);background:var(--win-2)}
+.body{padding:28px}
+@media (max-width:640px){.body{padding:20px}.menu{display:none}.bar .ctl i:nth-child(-n+2){display:none}}
+
+/* ---------- buttons, tags ---------- */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:0 24px;border-radius:999px;border:1.5px solid var(--edge);
+  background:linear-gradient(180deg,rgba(255,255,255,.55) 0,rgba(255,255,255,.18) 48%,rgba(255,255,255,0) 52%),var(--primary);
+  color:var(--on-primary);font-weight:700;text-decoration:none;cursor:pointer;box-shadow:0 2px 0 var(--hard);transition:transform .12s}
+.btn:hover{transform:translateY(-1px)}
+.btn:active{transform:translateY(1px);box-shadow:none}
+.btn.ghost{background:linear-gradient(180deg,rgba(255,255,255,.7) 0,rgba(255,255,255,.2) 50%,rgba(255,255,255,0) 52%),var(--win);color:var(--ink)}
+.btn.sm{min-height:38px;padding:0 16px;font-size:14px}
+.tag{display:inline-flex;align-items:center;height:26px;padding:0 10px;border-radius:999px;font-size:12.5px;font-weight:500;background:var(--sky-l);border:1px solid var(--sky);white-space:nowrap}
+.tag.ja{background:var(--lav-l);border-color:var(--lav)}
+.tag.pink{background:var(--pink-l);border-color:var(--pink)}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{min-height:36px;padding:0 14px;border-radius:999px;border:1.5px solid var(--edge);background:var(--win);cursor:pointer;font-size:14px}
+.chip[aria-pressed="true"]{background:var(--primary);color:var(--on-primary)}
+@media (max-width:640px){.chips.scroll{flex-wrap:nowrap;overflow-x:auto;padding-bottom:4px;scrollbar-width:none}}
+
+/* ---------- doodles ---------- */
+.doodle{position:absolute;color:var(--ink);pointer-events:none;opacity:.85}
+.doodle svg{display:block}
+
+/* ---------- hero desktop ---------- */
+.desktop{position:relative;padding:28px 0 64px;overflow:hidden}
+.desktop>.wrap{position:relative;z-index:1}
+.desktop::before,.desktop::after{content:"";position:absolute;border-radius:50%;background:var(--cloud);filter:blur(18px);pointer-events:none}
+.desktop::before{width:420px;height:140px;left:-80px;top:120px}
+.desktop::after{width:520px;height:170px;right:-120px;bottom:90px}
+.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:28px}
+.logo{font-family:var(--pixel);font-size:22px;text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.logo b{font-weight:400;background:var(--win);border:1.5px solid var(--edge);border-radius:8px;padding:0 8px;box-shadow:2px 2px 0 var(--hard)}
+.lang-switch{display:flex;border:1.5px solid var(--edge);border-radius:999px;overflow:hidden;background:var(--win);font-size:13px}
+.lang-switch a{padding:6px 12px;text-decoration:none;white-space:nowrap}
+.lang-switch a[aria-current="true"]{background:var(--primary);color:var(--on-primary)}
+
+.stage{position:relative;display:grid;grid-template-columns:110px minmax(0,1fr) 300px;gap:28px;align-items:start}
+.icons{display:grid;gap:14px;padding-top:6px}
+.icon{display:grid;justify-items:center;gap:4px;text-decoration:none;font-family:var(--pixel);font-size:13px;line-height:1.25;text-align:center;padding:6px;border-radius:8px}
+.icon:hover,.icon:focus-visible{background:rgba(255,255,255,.35)}
+.icon .f{position:relative}
+.icon .n{position:absolute;top:-6px;left:-6px;min-width:20px;height:20px;padding:0 5px;border-radius:999px;background:var(--badge);color:#fff;font-family:var(--sans);font-size:11px;font-weight:700;display:grid;place-items:center;border:1.5px solid #fff}
+.icon span.l{background:var(--win);border:1px solid var(--edge);padding:1px 6px;border-radius:4px}
+
+.hero .body{padding:44px 40px 36px;position:relative}
+.hero h1{font-family:var(--pixel);font-weight:400;font-size:clamp(42px,6.6vw,84px);line-height:1.08;margin:0 0 20px;letter-spacing:-.01em;max-width:11ch}
+.hero .lead{font-size:clamp(17px,1.6vw,20px);margin:0 0 6px;font-weight:500}
+.hero .lead-ja{font-size:15px;color:var(--sub);margin:0 0 28px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap}
+.hero-foot{display:flex;align-items:flex-end;justify-content:space-between;gap:16px;margin-top:24px}
+.hero .note{margin:0 0 8px;font-size:13.5px;color:var(--sub);max-width:46ch}
+.buddy{position:relative;flex:none;width:150px;padding-top:58px}
+.mascot{display:block;width:100%}
+.bubble{position:absolute;right:46px;top:0;background:var(--win);border:1.5px solid var(--edge);border-radius:14px;padding:6px 12px;font-family:var(--hand);font-size:19px;font-weight:700;white-space:nowrap;box-shadow:2px 2px 0 var(--hard)}
+.bubble::after{content:"";position:absolute;right:18px;bottom:-8px;width:12px;height:12px;background:var(--win);border-right:1.5px solid var(--edge);border-bottom:1.5px solid var(--edge);transform:rotate(45deg)}
+
+.side{display:grid;gap:16px}
+.toast{display:grid;grid-template-columns:40px 1fr auto;gap:4px 12px;align-items:start;padding:14px 16px;border-radius:20px;background:color-mix(in srgb,var(--win) 82%,transparent);
+  -webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border:1.5px solid var(--edge);box-shadow:4px 4px 0 var(--hard);text-decoration:none}
+.toast .app{grid-row:span 2;width:40px;height:40px;border-radius:10px;background:var(--butter);border:1.5px solid var(--edge);display:grid;place-items:center}
+.toast .who{font-weight:700;font-size:14px}
+.toast .when{font-size:12px;color:var(--sub)}
+.toast .msg{grid-column:2 / 4;font-size:14px;color:var(--sub)}
+.toast .msg b{color:var(--ink);font-weight:700}
+
+@media (max-width:980px){
+  .stage{grid-template-columns:1fr}
+  .icons{grid-auto-flow:column;grid-auto-columns:88px;overflow-x:auto;padding-bottom:4px;scrollbar-width:none;order:2}
+  .hero{order:1}.side{order:3}
+}
+@media (max-width:640px){
+  .desktop{padding-top:18px}
+  .hero .body{padding:28px 20px 24px}
+  .lang-switch{display:none}
+  .hero-foot{flex-direction:column;align-items:flex-end}
+  .hero .note{align-self:stretch}
+  .buddy{width:112px;padding-top:50px}
+  .bubble{font-size:16px;right:36px}
+  .side{grid-template-columns:1fr}
+  .hide-sm{display:none}
+}
+
+/* ---------- sections ---------- */
+section.zone{padding:56px 0}
+.zone-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:20px}
+.zone-head h2{margin:0;font-size:clamp(26px,3vw,32px);line-height:1.25}
+.zone-head p{margin:4px 0 0;color:var(--sub);max-width:60ch}
+
+/* moments */
+.moments{display:grid;grid-template-columns:200px minmax(0,1fr);gap:28px}
+.folders{display:grid;gap:6px;align-content:start}
+.folder{display:flex;align-items:center;gap:10px;min-height:44px;padding:4px 10px;border-radius:10px;border:1.5px solid transparent;background:none;cursor:pointer;text-align:left}
+.folder:hover{background:var(--pink-l)}
+.folder[aria-pressed="true"]{border-color:var(--edge);background:var(--pink-l)}
+.folder .c{margin-left:auto;font-family:var(--pixel);font-size:13px;color:var(--sub)}
+.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.mcard{display:grid;gap:10px;padding:18px;border-radius:14px;border:1.5px solid var(--edge);background:var(--win);cursor:pointer;text-align:left;box-shadow:3px 3px 0 var(--hard);transition:transform .12s}
+.mcard:hover{transform:translate(-1px,-1px);box-shadow:4px 4px 0 var(--hard)}
+.mcard .src{display:flex;align-items:center;gap:8px;font-size:13px;color:var(--sub)}
+.mcard .src .k{font-family:var(--pixel);border:1px solid var(--edge);border-radius:4px;padding:0 5px;font-size:11.5px;color:var(--ink);background:var(--win-2)}
+.mcard q{quotes:none;font-family:var(--ja);font-size:20px;font-weight:700;line-height:1.5}
+.mcard .ko{color:var(--sub);font-size:14.5px;margin:0}
+.mcard .tags{display:flex;gap:6px;flex-wrap:wrap}
+.empty{border:1.5px dashed var(--edge);border-radius:14px;padding:22px;color:var(--sub);background:var(--win-2)}
+@media (max-width:760px){.moments{grid-template-columns:1fr}.folders{grid-auto-flow:column;grid-auto-columns:max-content;overflow-x:auto;scrollbar-width:none}}
+
+/* styles (말투 도감) */
+.profiles{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:18px}
+.profile .body{padding:18px 18px 20px;display:grid;gap:10px}
+.profile .big{font-family:var(--ja);font-size:34px;font-weight:700;line-height:1.1}
+.profile dl{margin:0;display:grid;grid-template-columns:auto 1fr;gap:2px 12px;font-size:14px}
+.profile dt{color:var(--sub)}
+.profile dd{margin:0}
+.profile .ex{border-top:1px dashed var(--grid);padding-top:10px;font-size:14px}
+.profile .ex [lang="ja"]{display:block;font-size:15.5px;font-weight:500}
+.profile .linked{font-size:13px;color:var(--sub)}
+
+/* song lab */
+.player{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
+.screen{position:relative;aspect-ratio:16/9;margin:18px;border-radius:10px;border:1.5px solid var(--edge);overflow:hidden;
+  background:radial-gradient(circle at 30% 30%,var(--peach-l),transparent 60%),linear-gradient(135deg,var(--sky-l),var(--lav-l));display:grid;place-items:center;text-align:center}
+.screen .play{margin:0 auto;width:72px;height:72px;border-radius:50%;border:1.5px solid var(--edge);display:grid;place-items:center;
+  background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(255,255,255,.15) 50%,rgba(255,255,255,0) 52%),var(--primary);color:var(--on-primary)}
+.screen p{margin:12px 0 0;font-size:14px;color:var(--sub);padding:0 16px}
+.screen .now{position:absolute;left:12px;bottom:10px;font-family:var(--pixel);font-size:13px;background:var(--win);border:1px solid var(--edge);border-radius:4px;padding:0 6px}
+.controls{display:flex;align-items:center;gap:10px;margin:0 18px 18px;padding:10px 12px;border:1.5px solid var(--edge);border-radius:10px;background:var(--win-2)}
+.controls .track{flex:1;height:8px;border-radius:999px;background:var(--grid);overflow:hidden}
+.controls .track i{display:block;height:100%;width:28%;background:var(--peach);transition:width .3s}
+.controls .t{font-family:var(--pixel);font-size:13px}
+.plist{border-left:1.5px solid var(--edge);background:var(--win-2);padding:16px;display:grid;gap:10px;align-content:start}
+.plist h3{margin:0 0 2px;font-size:15px}
+.plist .meta{margin:0 0 6px;font-size:13px;color:var(--sub)}
+#cues{position:relative;max-height:440px;overflow:auto;scroll-behavior:smooth}
+.album{display:grid;gap:8px;margin-bottom:6px}
+.album h3{font-family:var(--pixel);font-weight:400}
+.album .chip{min-height:34px;font-size:13.5px}
+#ytm{justify-self:start}
+.screen b{display:block;font-size:17px;margin-top:12px}
+.screen iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.cue{display:grid;grid-template-columns:52px 1fr;gap:2px 10px;padding:12px;border-radius:10px;border:1.5px solid transparent;background:var(--win);cursor:pointer;text-align:left}
+.cue[aria-pressed="true"]{border-color:var(--edge);background:var(--peach-l)}
+.cue .tm{grid-row:span 3;font-family:var(--pixel);font-size:14px;color:var(--sub);padding-top:2px}
+.cue .w{font-family:var(--ja);font-weight:700;font-size:18px}
+.cue .r{font-size:13px;color:var(--sub)}
+.cue .m{font-size:14px}
+@media (max-width:860px){.player{grid-template-columns:1fr}.plist{border-left:0;border-top:1.5px solid var(--edge)}}
+
+/* dictionary */
+.notebook .body{
+  background:
+    linear-gradient(90deg,transparent 46px,var(--margin) 46px,var(--margin) 48px,transparent 48px),
+    linear-gradient(var(--grid) 1px,transparent 1px) 0 0/24px 24px,
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/24px 24px,
+    var(--win);
+  padding-left:72px}
+@media (max-width:640px){.notebook .body{padding-left:40px;background:
+    linear-gradient(90deg,transparent 22px,var(--margin) 22px,var(--margin) 24px,transparent 24px),
+    linear-gradient(var(--grid) 1px,transparent 1px) 0 0/24px 24px,
+    linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/24px 24px,var(--win)}}
+.dtools{display:grid;gap:14px;margin-bottom:20px}
+.search{display:flex;align-items:center;gap:8px;min-height:50px;padding:0 16px;border:1.5px solid var(--edge);border-radius:999px;background:var(--win);max-width:560px}
+.search input{flex:1;border:0;background:none;font:inherit;color:var(--ink);min-width:0;height:46px}
+.search input:focus{outline:none}
+.search:focus-within{outline:3px solid var(--primary);outline-offset:2px}
+.seg{display:inline-flex;border:1.5px solid var(--edge);border-radius:999px;overflow:hidden;background:var(--win);width:max-content}
+.seg button{border:0;background:none;padding:0 16px;min-height:40px;cursor:pointer;font-size:14px}
+.seg button[aria-pressed="true"]{background:var(--primary);color:var(--on-primary)}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.memo{background:var(--win);border:1.5px solid var(--edge);border-radius:4px 14px 14px 14px;padding:16px;display:grid;gap:4px;box-shadow:3px 3px 0 var(--hard)}
+.memo .e{font-size:24px;font-weight:700;line-height:1.3}
+.memo .r{font-size:13.5px;color:var(--sub)}
+.memo .m{font-size:15px}
+.memo .cp{font-size:13.5px;color:var(--sub);border-top:1px dashed var(--grid);padding-top:6px;margin-top:4px}
+.memo .tag{justify-self:start;margin-top:4px}
+.dempty{grid-column:1/-1}
+
+/* real talk */
+.messenger{display:grid;grid-template-columns:240px minmax(0,1fr)}
+.rooms{border-right:1.5px solid var(--edge);background:var(--win-2);padding:10px;display:grid;gap:6px;align-content:start}
+.room{display:grid;gap:2px;padding:10px 12px;border-radius:10px;border:1.5px solid transparent;background:none;text-align:left;cursor:pointer}
+.room b{font-size:14.5px}
+.room span{font-size:12.5px;color:var(--sub)}
+.room[aria-pressed="true"]{background:var(--mint-l);border-color:var(--edge)}
+.chat{padding:20px;display:grid;gap:14px;align-content:start;min-height:380px}
+.msg{display:grid;gap:2px;max-width:min(78%,460px)}
+.msg .who{font-size:12px;color:var(--sub)}
+.msg .bub{padding:10px 14px;border-radius:16px;border:1.5px solid var(--edge)}
+.msg .bub [lang="ja"]{display:block;font-size:16px;font-weight:500}
+.msg .bub .ko{display:block;font-size:13.5px;color:var(--sub)}
+.msg.kr{justify-self:start}.msg.kr .bub{background:var(--sky-l);border-top-left-radius:4px}
+.msg.jp{justify-self:end;text-align:right}.msg.jp .bub{background:var(--lav-l);border-top-right-radius:4px}
+.tip{border:1.5px dashed var(--edge);border-radius:12px;padding:12px 14px;background:var(--mint-l);font-size:14px}
+.tip b{display:block;margin-bottom:2px}
+@media (max-width:760px){.messenger{grid-template-columns:1fr}.rooms{border-right:0;border-bottom:1.5px solid var(--edge);grid-auto-flow:column;grid-auto-columns:minmax(180px,1fr);overflow-x:auto}.msg{max-width:92%}}
+
+/* daily */
+.daily{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:28px;align-items:center}
+.daily .date{font-family:var(--pixel);font-size:14px;color:var(--sub)}
+.daily .word{font-family:var(--ja);font-size:clamp(40px,6vw,64px);font-weight:700;line-height:1.15;margin:6px 0 4px}
+.daily .read{font-size:16px;color:var(--sub);margin:0}
+.daily .mean{font-size:20px;font-weight:700;margin:10px 0 0}
+.daily dl{margin:0;display:grid;gap:12px}
+.daily dt{font-size:13px;color:var(--sub)}
+.daily dd{margin:0;font-size:15.5px}
+.daily dd [lang="ja"]{display:block;font-weight:500}
+.daily .acts{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+@media (max-width:760px){.daily{grid-template-columns:1fr}}
+
+/* footer */
+.foot .body{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.slogan{font-family:var(--pixel);font-size:clamp(22px,3vw,30px);margin:0 0 10px;line-height:1.3}
+.foot p{margin:0 0 8px;color:var(--sub);font-size:14px}
+.foot nav{display:grid;grid-template-columns:1fr 1fr;gap:6px 18px;font-size:14px;align-content:start}
+@media (max-width:760px){.foot .body{grid-template-columns:1fr}}
+
+/* dialog */
+dialog{border:0;padding:0;background:transparent;max-width:min(640px,calc(100% - 24px));width:100%;color:var(--ink)}
+dialog::backdrop{background:rgba(14,26,54,.45)}
+dialog .win{max-height:calc(100dvh - 48px);display:flex;flex-direction:column}
+dialog .body{overflow:auto;display:grid;gap:16px}
+.closer{cursor:pointer}
+.src-box{display:grid;gap:4px;padding:14px;border:1.5px solid var(--edge);border-radius:10px;background:var(--win-2);font-size:14px}
+.src-box .badge{justify-self:start;font-family:var(--pixel);font-size:12px;border:1px solid var(--edge);border-radius:4px;padding:0 6px;background:var(--pink-l)}
+.quote .rd{font-size:14px;color:var(--sub)}
+.quote .ja{font-family:var(--ja);font-size:26px;font-weight:700;line-height:1.45}
+.quote .ko{font-size:16px;margin-top:2px}
+.box{border-radius:12px;padding:14px;border:1.5px solid var(--edge)}
+.box h4{margin:0 0 6px;font-size:14px}
+.box p,.box ul{margin:0;font-size:14.5px}
+.box ul{padding-left:18px}
+.box.lav{background:var(--lav-l)}.box.sky{background:var(--sky-l)}.box.butter{background:var(--butter-l)}
+
+/* taskbar */
+.taskbar{position:fixed;left:0;right:0;bottom:0;z-index:20;display:flex;align-items:center;gap:8px;
+  padding:6px 10px calc(6px + env(safe-area-inset-bottom,0px));
+  background:linear-gradient(180deg,var(--bar-2),var(--sky-l));border-top:1.5px solid var(--edge)}
+.start{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 14px;border-radius:999px;border:1.5px solid var(--edge);text-decoration:none;font-family:var(--pixel);font-size:15px;
+  background:linear-gradient(180deg,rgba(255,255,255,.6),rgba(255,255,255,0) 52%),var(--mint)}
+.tabs{display:flex;gap:6px;flex:1;min-width:0;overflow-x:auto;scrollbar-width:none}
+.tab{display:inline-flex;align-items:center;gap:6px;min-height:40px;padding:0 12px;border-radius:8px;border:1.5px solid var(--edge);background:var(--win);text-decoration:none;font-family:var(--pixel);font-size:13.5px;white-space:nowrap}
+.tab svg{flex:none}
+.tab[aria-current="true"]{background:var(--primary);color:var(--on-primary)}
+.clock{font-family:var(--pixel);font-size:13.5px;padding:0 10px;min-height:40px;display:flex;align-items:center;border-left:1.5px solid var(--edge);white-space:nowrap}
+@media (max-width:760px){
+  .start,.clock{display:none}
+  .taskbar{padding-inline:4px}
+  .tabs{gap:2px;justify-content:space-between}
+  .tab{flex:1 0 56px;flex-direction:column;gap:2px;min-height:52px;padding:4px 2px;border:0;background:none;font-size:11px;justify-content:center;border-radius:10px}
+}
+
+/* pixel friends */
+.pix{display:inline-block;line-height:0;flex:none}
+.pix svg{display:block;width:100%;height:auto;shape-rendering:crispEdges}
+.zone-head h2{display:flex;align-items:center;gap:12px}
+.zone-head h2 .pix{width:40px}
+.pix.mascot{display:block;width:100%}
+.friends{display:flex;gap:20px;flex-wrap:wrap;margin:18px 0 12px}
+.friend{display:grid;justify-items:center;gap:2px;font-size:13px;color:var(--sub);text-align:center}
+.friend b{color:var(--ink);font-size:14px}
+.friend .pix{width:52px;margin-bottom:4px}
+/* my image slots */
+img.slot{display:none}
+img.slot.on{display:block}
+.top .slot.on{height:72px;width:auto}
+.hero-foot .hero-deco.on{height:150px;width:auto;margin-left:auto}
+.zone-head{position:relative}
+.zone-head:has(.deco.on){padding-right:140px}
+.zone-head .deco.on{position:absolute;right:0;bottom:-6px;height:120px;width:auto}
+.folder img.slot.on{width:28px;height:28px;object-fit:contain}
+.folder img.slot.on + svg{display:none}
+@media (max-width:640px){.top .slot.on{height:48px}.hero-foot .hero-deco.on{height:96px;margin-left:0}.zone-head:has(.deco.on){padding-right:84px}.zone-head .deco.on{height:76px}}
+/* mini player */
+:root{--tb-h:54px;--mb-h:64px}
+@media (max-width:760px){:root{--tb-h:66px;--mb-h:96px}}
+.mbar{position:fixed;left:0;right:0;margin-inline:auto;width:min(1120px,calc(100% - 24px));bottom:calc(var(--tb-h) + 8px + env(safe-area-inset-bottom,0px));z-index:19;
+  display:grid;grid-template-columns:auto minmax(0,1fr) auto minmax(0,1.3fr);align-items:center;gap:14px;min-height:var(--mb-h);padding:8px 14px;
+  border:1.5px solid var(--edge);border-radius:14px;background:color-mix(in srgb,var(--win) 88%,transparent);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);box-shadow:4px 4px 0 var(--hard)}
+.mb-ico{width:44px;height:44px;border-radius:10px;border:1.5px solid var(--edge);background:var(--peach);display:grid;place-items:center;cursor:pointer;padding:0}
+.mb-info{display:grid;min-width:0;line-height:1.35}
+.mb-info b{font-size:15px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mb-info span{font-size:12.5px;color:var(--sub);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.mb-ctl{display:flex;align-items:center;gap:8px}
+.mb-ctl button{width:40px;height:40px;border-radius:50%;border:1.5px solid var(--edge);background:var(--win);display:grid;place-items:center;cursor:pointer;padding:0}
+.mb-ctl #mb-play{width:48px;height:48px;color:var(--on-primary);background:linear-gradient(180deg,rgba(255,255,255,.55),rgba(255,255,255,.15) 48%,rgba(255,255,255,0) 52%),var(--primary)}
+.mb-prog{display:flex;align-items:center;gap:10px;font-family:var(--pixel);font-size:12.5px;color:var(--sub);min-width:0}
+.mb-prog input{flex:1;min-width:0;accent-color:var(--peach);height:20px;cursor:pointer}
+@media (max-width:760px){
+  .mbar{grid-template-columns:auto minmax(0,1fr) auto;gap:6px 10px;padding:8px 10px}
+  .mb-prog{grid-column:1/-1}
+  .mb-ctl{gap:4px}.mb-ctl button{width:36px;height:36px}.mb-ctl #mb-play{width:42px;height:42px}
+  .mb-ico{width:38px;height:38px}
+}
+#mini{position:fixed;z-index:21;right:max(12px,calc((100% - 1120px) / 2));bottom:calc(var(--tb-h) + var(--mb-h) + 24px + env(safe-area-inset-bottom,0px));width:min(380px,calc(100% - 24px))}
+.mini-v{aspect-ratio:16/9;min-height:200px;background:#000;position:relative}
+.mini-v iframe,.mini-v #mp-video{position:absolute;inset:0;width:100%;height:100%;border:0}
+.mini-msg{position:absolute;inset:0;display:grid;place-items:center;text-align:center;padding:16px;color:#fff;font-size:14px}
+.bar .ctl button{width:22px;height:22px;border:1.5px solid var(--edge);border-radius:4px;background:var(--win);color:var(--ink);display:grid;place-items:center;font-size:12px;cursor:pointer;padding:0;line-height:1}
+.screen .play{cursor:pointer;padding:0}
+.snack{position:fixed;left:50%;bottom:calc(var(--tb-h) + var(--mb-h) + 28px + env(safe-area-inset-bottom,0px));transform:translate(-50%,20px);opacity:0;z-index:30;
+  background:var(--ink);color:var(--win);padding:10px 16px;border-radius:999px;font-size:14px;transition:.2s;pointer-events:none}
+.snack.on{opacity:1;transform:translate(-50%,0)}
+</style>
+<script>
+/* 내 이미지 자리: 같은 폴더에 파일이 있으면 보이고, 없으면 조용히 사라져요 */
+document.addEventListener('load', e => { const t = e.target; if (t.classList && t.classList.contains('slot')) t.classList.add('on'); }, true);
+document.addEventListener('error', e => { const t = e.target; if (t.classList && t.classList.contains('slot')) t.remove(); }, true);
+</script>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="d-star" viewBox="0 0 40 40"><path d="M20 3l4.6 10.6L36 15l-8.6 7.6L30 34l-10-6-10 6 2.6-11.4L4 15l11.4-1.4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="d-heart" viewBox="0 0 40 40"><path d="M20 34S5 25 5 14.5C5 9 9 6 13 6c3.2 0 5.6 2 7 4.6C21.4 8 23.8 6 27 6c4 0 8 3 8 8.5C35 25 20 34 20 34z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="d-cloud" viewBox="0 0 60 36"><path d="M14 31c-6 0-10-4-10-9 0-5 4-8.6 8.8-8.6C14 7.6 19 4 24.6 4c5.6 0 10 3.4 11.4 8.2 1.2-.4 2.4-.6 3.6-.6 6.2 0 11 4.6 11 10.2 0 5.4-4.4 9.2-10 9.2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="d-note" viewBox="0 0 40 40"><path d="M15 30V8l18-4v22" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><ellipse cx="11" cy="30" rx="5" ry="4" fill="currentColor"/><ellipse cx="29" cy="26" rx="5" ry="4" fill="currentColor"/></symbol>
+    <symbol id="d-spark" viewBox="0 0 40 40"><path d="M20 4c1.4 9 6 14.6 16 16-10 1.4-14.6 7-16 16-1.4-9-6-14.6-16-16 10-1.4 14.6-7 16-16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-folder" viewBox="0 0 64 52"><path d="M3 9a5 5 0 015-5h15l6 6h27a5 5 0 015 5v29a5 5 0 01-5 5H8a5 5 0 01-5-5z" fill="currentColor" stroke="var(--edge)" stroke-width="2"/><path d="M3 17h58" stroke="var(--edge)" stroke-width="2"/><path d="M32 23l2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-2.9-5.3 2.9 1.1-6-4.4-4.2 6-.8z" fill="var(--win)" stroke="var(--edge)" stroke-width="1.5" stroke-linejoin="round"/></symbol>
+    <symbol id="t-moment" viewBox="0 0 20 20"><path d="M3 4h14v9H8l-4 3v-3H3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="t-style" viewBox="0 0 20 20"><path d="M10 2.5l2.2 4.6 5 .7-3.6 3.5.9 5-4.5-2.4-4.5 2.4.9-5L2.8 7.8l5-.7z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="t-song" viewBox="0 0 20 20"><path d="M7.5 15V4.5l9-2v10.5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="5.5" cy="15" r="2.4" fill="currentColor"/><circle cx="14.5" cy="13" r="2.4" fill="currentColor"/></symbol>
+    <symbol id="t-dict" viewBox="0 0 20 20"><path d="M4 3h9a3 3 0 013 3v11H7a3 3 0 01-3-3z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M7 7h6M7 10h4" stroke="currentColor" stroke-width="1.6"/></symbol>
+    <symbol id="t-talk" viewBox="0 0 20 20"><path d="M2.5 5h10v7H6l-3.5 2.5zM14.5 8h3v7.5L15 14h-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></symbol>
+    <symbol id="t-daily" viewBox="0 0 20 20"><circle cx="10" cy="10" r="3.6" fill="none" stroke="currentColor" stroke-width="1.6"/><path d="M10 1.5v2.5M10 16v2.5M1.5 10H4M16 10h2.5M4 4l1.8 1.8M14.2 14.2L16 16M4 16l1.8-1.8M14.2 5.8L16 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<header class="desktop" id="top">
+  <div class="wrap">
+    <div class="top">
+      <a class="logo" href="#top" aria-label="WISH LANGUAGE 처음으로"><b>WISH</b> LANGUAGE</a>
+      <img class="slot" src="deco-2.png" alt="">
+      <div class="lang-switch" role="group" aria-label="배우는 언어">
+        <a href="#dictionary" data-learn="ja" aria-current="true">일본어 배우기</a>
+        <a href="#dictionary" data-learn="ko" lang="ja">韓国語を学ぶ</a>
+      </div>
+    </div>
+
+    <div class="stage">
+      <nav class="icons" aria-label="섹션 바로가기">
+        <a class="icon" href="#moments"><span class="f" style="color:var(--pink)"><svg width="56" height="46" aria-hidden="true"><use href="#i-folder"/></svg><span class="n" id="moments-badge">2</span></span><span class="l">WISH MOMENTS</span></a>
+        <a class="icon" href="#styles"><span class="f" style="color:var(--lav)"><svg width="56" height="46" aria-hidden="true"><use href="#i-folder"/></svg></span><span class="l">말투 도감</span></a>
+        <a class="icon" href="#song-lab"><span class="f" style="color:var(--peach)"><svg width="56" height="46" aria-hidden="true"><use href="#i-folder"/></svg></span><span class="l">SONG LAB</span></a>
+        <a class="icon" href="#dictionary"><span class="f" style="color:var(--sky)"><svg width="56" height="46" aria-hidden="true"><use href="#i-folder"/></svg></span><span class="l">DICTIONARY</span></a>
+        <a class="icon" href="#real-talk"><span class="f" style="color:var(--mint)"><svg width="56" height="46" aria-hidden="true"><use href="#i-folder"/></svg></span><span class="l">REAL TALK</span></a>
+      </nav>
+
+      <div class="win hero">
+        <div class="bar"><span class="ttl">wish_language.exe</span><span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+        <div class="menu" aria-hidden="true"><span>File</span><span>Edit</span><span>Learn</span><span>Help</span></div>
+        <div class="body">
+          <h1>Words bring us closer.</h1>
+          <p class="lead">NCT WISH의 진짜 일본어로 배우는 말투</p>
+          <p class="lead-ja" lang="ja">NCT WISHのことばで、韓国語と日本語をいっしょに。</p>
+          <div class="ctas">
+            <a class="btn" href="#moments" data-learn="ja">일본어 배우기</a>
+            <a class="btn ghost" href="#dictionary" data-learn="ko" lang="ja">韓国語を学ぶ</a>
+          </div>
+          <div class="hero-foot">
+          <p class="note">교과서에는 잘 안 나오는 〜じゃん, 〜だよね, めっちゃ 같은 말투를 멤버들이 실제로 한 말과 함께 배워요.</p>
+          <img class="slot hero-deco" src="deco-1.png" alt="">
+          <div class="buddy">
+          <div class="bubble" aria-hidden="true">오늘도 한 마디 배워 볼까?</div>
+          <span class="pix mascot" data-pix="kumo" role="img" aria-label="구름 친구 구모"></span>
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <aside class="side">
+        <a class="toast" href="#daily-wish" id="toast">
+          <span class="app" aria-hidden="true"><svg width="22" height="22"><use href="#t-daily"/></svg></span>
+          <span class="who">New message from WISH</span><span class="when">now</span>
+          <span class="msg">오늘의 표현 <b lang="ja" id="toast-word">…</b></span>
+        </a>
+      </aside>
+    </div>
+  </div>
+  <span class="doodle" style="left:6%;top:52%;color:var(--badge)"><svg width="30" height="30"><use href="#d-heart"/></svg></span>
+  <span class="doodle hide-sm" style="left:46%;top:16px"><svg width="34" height="34"><use href="#d-star"/></svg></span>
+  <span class="doodle" style="right:4%;top:70px"><svg width="64" height="38"><use href="#d-cloud"/></svg></span>
+  <span class="doodle hide-sm" style="right:24%;bottom:40px"><svg width="34" height="34"><use href="#d-note"/></svg></span>
+  <span class="doodle hide-sm" style="left:30%;bottom:22px;color:var(--edge)"><svg width="28" height="28"><use href="#d-spark"/></svg></span>
+</header>
+
+<main>
+  <section class="zone" id="moments" aria-labelledby="moments-h">
+    <div class="wrap">
+      <div class="zone-head">
+        <div>
+          <h2 id="moments-h"><span class="pix" data-pix="fuki" data-tone="pink" aria-hidden="true"></span>WISH MOMENTS</h2><img class="slot deco" src="deco-3.png" alt="">
+          <p>멤버들이 인터뷰·방송·팬미팅에서 실제로 한 일본어. 출처와 함께 짧게 인용하고, 말투까지 풀어 드려요.</p>
+        </div>
+      </div>
+      <div class="win" data-accent="pink">
+        <div class="bar"><span class="ttl">wish_moments.exe</span><span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+        <div class="body moments">
+          <div class="folders" role="group" aria-label="멤버별 보기" id="folders"></div>
+          <div>
+            <div class="chips scroll" role="group" aria-label="출처 종류" id="kinds" style="margin-bottom:16px">
+              <button type="button" class="chip" data-k="all" aria-pressed="true">전체</button>
+              <button type="button" class="chip" data-k="article" aria-pressed="false">인터뷰 기사</button>
+              <button type="button" class="chip" data-k="broadcast" aria-pressed="false">TV 방송</button>
+              <button type="button" class="chip" data-k="fan" aria-pressed="false">영상 자막</button>
+              <button type="button" class="chip" data-k="excerpt" aria-pressed="false">인터뷰 발췌</button>
+            </div>
+            <div class="mgrid" id="mgrid"></div>
+            <button type="button" class="btn ghost sm" id="more" style="margin-top:16px" hidden>더 보기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="zone" id="styles" aria-labelledby="styles-h">
+    <div class="wrap">
+      <div class="zone-head">
+        <div>
+          <h2 id="styles-h"><span class="pix" data-pix="fuki" data-tone="lav" aria-hidden="true"></span>말투 도감</h2><img class="slot deco" src="deco-4.png" alt="">
+          <p>교과서식 일본어와 실제 말투는 달라요. 말투 하나를 알면, 멤버의 말이 훨씬 가깝게 들려요.</p>
+        </div>
+      </div>
+      <div class="profiles" id="profiles"></div>
+    </div>
+  </section>
+
+  <section class="zone" id="song-lab" aria-labelledby="song-h">
+    <div class="wrap">
+      <div class="zone-head">
+        <div>
+          <h2 id="song-h"><span class="pix" data-pix="onpu" aria-hidden="true"></span>SONG LAB</h2><img class="slot deco" src="deco-5.png" alt="">
+          <p>공식 영상을 들으면서, 그 순간 나오는 핵심 단어 하나를 배워요. 가사 전체 대신 표현 해설에 집중해요.</p>
+        </div>
+      </div>
+      <div class="win" data-accent="peach">
+        <div class="bar"><span class="ttl">wish_player.exe</span><span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+        <div class="player">
+          <div>
+            <div class="screen" id="screen">
+              <div>
+                <button type="button" class="play" id="screen-play" aria-label="이 곡 재생"><svg width="26" height="26" viewBox="0 0 26 26" aria-hidden="true"><path d="M8 5l14 8-14 8z" fill="currentColor"/></svg></button>
+                <b id="song-title"></b>
+                <p>재생 버튼을 누르면 아래 미니 플레이어에서 공식 영상이 재생돼요. 스크롤해도 음악은 계속 나와요.</p>
+              </div>
+              <span class="now" id="now">0:42</span>
+            </div>
+            <div class="controls" aria-hidden="true">
+              <svg width="18" height="18"><use href="#t-song"/></svg>
+              <span class="track"><i id="track"></i></span>
+              <span class="t" id="tt">0:42</span>
+            </div>
+          </div>
+          <div class="plist">
+            <div id="albums"></div>
+            <a class="btn sm" id="ytm" target="_blank" rel="noopener">YouTube Music에서 듣기</a>
+            <p class="meta" style="margin-top:6px" id="cue-meta"></p>
+            <div id="cues" role="group" aria-label="장면별 핵심 표현" style="display:grid;gap:10px"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="zone" id="dictionary" aria-labelledby="dict-h">
+    <div class="wrap">
+      <div class="zone-head">
+        <div>
+          <h2 id="dict-h"><span class="pix" data-pix="tegami" aria-hidden="true"></span>WISH DICTIONARY</h2><img class="slot deco" src="deco-6.png" alt="">
+          <p>일본 팬과 이야기할 때 바로 쓰는 덕질 표현 사전.</p>
+        </div>
+      </div>
+      <div class="win notebook">
+        <div class="bar"><span class="ttl">dictionary.txt</span><span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+        <div class="body">
+          <div class="dtools">
+            <label class="search"><svg width="18" height="18" viewBox="0 0 20 20" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M13 13l4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg><span class="sr">표현 검색</span><input id="q" type="search" placeholder="推し, 최애, 교환… 검색" autocomplete="off"></label>
+            <div class="seg" role="group" aria-label="배우는 언어">
+              <button type="button" data-lang="ja" aria-pressed="true">일본어 배우기</button>
+              <button type="button" data-lang="ko" aria-pressed="false" lang="ja">韓国語を学ぶ</button>
+            </div>
+            <div class="chips scroll" role="group" aria-label="카테고리" id="cats"></div>
+          </div>
+          <div class="dgrid" id="dgrid" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="zone" id="real-talk" aria-labelledby="talk-h">
+    <div class="wrap">
+      <div class="zone-head">
+        <div>
+          <h2 id="talk-h"><span class="pix" data-pix="fuki" data-tone="mint" aria-hidden="true"></span>REAL TALK</h2><img class="slot deco" src="deco-7.png" alt="">
+          <p>콘서트, 포카 교환, X 답글까지. 일본 팬과 실제로 나누는 대화로 연습해요.</p>
+        </div>
+      </div>
+      <div class="win" data-accent="mint">
+        <div class="bar"><span class="ttl">wish_messenger.exe</span><span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+        <div class="messenger">
+          <div class="rooms" role="group" aria-label="상황 고르기" id="rooms"></div>
+          <div class="chat" id="chat" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="zone" id="daily-wish" aria-labelledby="daily-h">
+    <div class="wrap">
+      <div class="zone-head">
+        <div>
+          <h2 id="daily-h"><span class="pix" data-pix="kumo" aria-hidden="true"></span>DAILY WISH</h2><img class="slot deco" src="deco-8.png" alt="">
+          <p>매일 하나씩, 오늘 바로 써먹는 일본어.</p>
+        </div>
+      </div>
+      <div class="win" data-accent="butter">
+        <div class="bar"><span class="ttl">today.wish</span><span class="ctl" aria-hidden="true"><i>_</i><i>□</i><i>×</i></span></div>
+        <div class="body daily">
+          <div>
+            <div class="date" id="d-date"></div>
+            <div class="word" lang="ja" id="d-word"></div>
+            <p class="read" id="d-read"></p>
+            <p class="mean" id="d-mean"></p>
+            <div class="acts">
+              <button class="btn" type="button" id="save">MY WISH에 저장</button>
+              <button class="btn ghost" type="button" id="say-daily">발음 듣기</button>
+              <a class="btn ghost" id="share" target="_blank" rel="noopener">X에 공유</a>
+            </div>
+          </div>
+          <dl>
+            <div><dt>언제 쓰나요</dt><dd id="d-when"></dd></div>
+            <div><dt>이렇게 써 보세요</dt><dd id="d-ex"></dd></div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="zone" aria-label="WISH LANGUAGE 소개">
+    <div class="wrap">
+      <div class="win foot">
+        <div class="bar"><span class="ttl">about.txt</span></div>
+        <div class="body">
+          <div>
+            <p class="slogan">Music · Language · Friendship</p>
+            <div class="friends" aria-label="WISH 친구들">
+              <div class="friend"><span class="pix" data-pix="kumo" aria-hidden="true"></span><b>구모</b><span lang="ja">くも · 구름</span></div>
+              <div class="friend"><span class="pix" data-pix="fuki" data-tone="pink" aria-hidden="true"></span><b>후키</b><span lang="ja">ふきだし · 말풍선</span></div>
+              <div class="friend"><span class="pix" data-pix="onpu" aria-hidden="true"></span><b>온푸</b><span lang="ja">おんぷ · 음표</span></div>
+              <div class="friend"><span class="pix" data-pix="tegami" aria-hidden="true"></span><b>테가미</b><span lang="ja">てがみ · 편지</span></div>
+            </div>
+            <p>WISH 친구들의 이름은 모두 일본어 단어예요. 이름을 부르면서 단어도 하나씩 외워 보세요.</p>
+            <p>WISH LANGUAGE는 한국 팬과 일본 팬이 서로의 말을 배우며 가까워지는 공간이에요. 지금은 한국 팬을 위한 일본어부터 시작하고, 일본 팬을 위한 한국어도 늘려 갈 거예요.</p>
+            <p>비공식 팬 프로젝트이며 SM Entertainment 및 NCT WISH와 관련이 없습니다.</p>
+            <p lang="ja">非公式ファンプロジェクトです。SM EntertainmentおよびNCT WISHとは関係ありません。</p>
+            <p>가사와 공식 이미지·음원은 싣지 않으며, 인용은 짧게 출처와 함께 표기해요.</p>
+          </div>
+          <nav aria-label="사이트 메뉴">
+            <a href="#moments">WISH MOMENTS</a><a href="#styles">말투 도감</a>
+            <a href="#song-lab">SONG LAB</a><a href="#dictionary">WISH DICTIONARY</a>
+            <a href="#real-talk">REAL TALK</a><a href="#daily-wish">DAILY WISH</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<nav class="taskbar" aria-label="주요 메뉴">
+  <a class="start" href="#top"><svg width="16" height="16" aria-hidden="true"><use href="#t-style"/></svg>start</a>
+  <div class="tabs">
+    <a class="tab" href="#moments" data-sec="moments"><svg width="18" height="18" aria-hidden="true"><use href="#t-moment"/></svg>MOMENTS</a>
+    <a class="tab" href="#styles" data-sec="styles"><svg width="18" height="18" aria-hidden="true"><use href="#t-style"/></svg>말투 도감</a>
+    <a class="tab" href="#song-lab" data-sec="song-lab"><svg width="18" height="18" aria-hidden="true"><use href="#t-song"/></svg>SONG LAB</a>
+    <a class="tab" href="#dictionary" data-sec="dictionary"><svg width="18" height="18" aria-hidden="true"><use href="#t-dict"/></svg>사전</a>
+    <a class="tab" href="#real-talk" data-sec="real-talk"><svg width="18" height="18" aria-hidden="true"><use href="#t-talk"/></svg>REAL TALK</a>
+    <a class="tab" href="#daily-wish" data-sec="daily-wish"><svg width="18" height="18" aria-hidden="true"><use href="#t-daily"/></svg>DAILY</a>
+  </div>
+  <span class="clock" id="clock"></span>
+</nav>
+
+<div class="mbar" id="mbar" role="region" aria-label="음악 재생 바">
+  <button type="button" class="mb-ico" id="mb-show" aria-label="영상 창 열기"><svg width="22" height="22" aria-hidden="true"><use href="#t-song"/></svg></button>
+  <div class="mb-info"><b id="mb-title">듣고 싶은 곡을 골라 보세요</b><span id="mb-sub">SONG LAB · 12곡</span></div>
+  <div class="mb-ctl">
+    <button type="button" id="mb-prev" aria-label="이전 곡"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 2v12M14 2L5 8l9 6z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button>
+    <button type="button" id="mb-play" aria-label="재생"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true" id="mb-icon"><path d="M5 3l11 6-11 6z" fill="currentColor"/></svg></button>
+    <button type="button" id="mb-next" aria-label="다음 곡"><svg width="16" height="16" viewBox="0 0 16 16" aria-hidden="true"><path d="M13 2v12M2 2l9 6-9 6z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></button>
+  </div>
+  <div class="mb-prog"><span id="mb-cur">0:00</span><input type="range" id="mb-seek" min="0" max="1000" value="0" aria-label="재생 위치"><span id="mb-dur">0:00</span></div>
+</div>
+
+<div class="win mini" id="mini" data-accent="peach" hidden>
+  <div class="bar"><span class="ttl">now_playing.exe</span><span class="ctl"><button type="button" id="mini-min" aria-label="영상 창 접기 (일시정지)">_</button><button type="button" id="mini-close" aria-label="플레이어 닫기">×</button></span></div>
+  <div class="mini-v"><div id="mp-video"></div><div class="mini-msg" id="mini-msg" hidden></div></div>
+</div>
+
+<div class="snack" id="snack" role="status"></div>
+
+<dialog id="dlg" aria-labelledby="dlg-title">
+  <div class="win" data-accent="pink">
+    <div class="bar"><span class="ttl" id="dlg-title">moment.txt</span><span class="ctl"><i aria-hidden="true">_</i><i aria-hidden="true">□</i><button class="closer" type="button" id="dlg-close" aria-label="닫기" style="all:unset;width:20px;height:20px;border:1.5px solid var(--edge);border-radius:4px;background:var(--win);display:grid;place-items:center;font-size:11px;cursor:pointer">×</button></span></div>
+    <div class="body" id="dlg-body"></div>
+  </div>
+</dialog>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+
+  /* ---------- pixel friends (오리지널 캐릭터) ---------- */
+  const PIX = {"kumo": ["................", ".....kkkk.......", "....kwwwwk.kkk..", "..kkwwwwwwkwwwk.", ".kwwwwwwwwwwwwk.", "kwwwwwwwwwwwwwwk", "kwwwkwwwwwwkwwwk", "kwwpwwwkkwwwwpwk", "kwwwwwwwwwwwwwwk", ".kwwwwwwwwwwwwk.", "..kkkkkkkkkkkk.."], "fuki": [".kkkkkkkkkkkkkk.", "kwwwwwwwwwwwwwwk", "kwwwwwwwwwwwwwwk", "kwwwkwwwwwwkwwwk", "kwwwkwwwwwwkwwwk", "kwppwwwkkwwwwppk", "kwwwwwwwwwwwwwwk", "kwwwwwwwwwwwwwwk", ".kkkkkkkkwwkkkk.", ".........kwk....", "........kwk.....", "........kk......"], "onpu": ["..........kk....", "..........kyk...", "..........kyyk..", "..........kyyyk.", "..........kykyyk", "..........kk.kyk", "..........kk..kk", "..........kk....", "....kkkkkkkk....", "..kkyyyyyykk....", ".kyyyyyyyyyk....", ".kyykyyyykyk....", ".kypyyykkypk....", ".kyyyyyyyyyk....", "..kkyyyyyykk....", "....kkkkkk......"], "tegami": ["kkkkkkkkkkkkkkkk", "kkwwwwwwwwwwwwkk", "kwkwwwwwwwwwwkwk", "kwwkwwwwwwwwkwwk", "kwwwkwwwwwwkwwwk", "kwwwwkkppkkwwwwk", "kwwwwwkppkwwwwwk", "kwwwwwwkkwwwwwwk", "kwwkwwwwwwwwkwwk", "kwpwwwwkkwwwwpwk", "kwwwwwwwwwwwwwwk", "kkkkkkkkkkkkkkkk"]};
+  const PAL = { k:'#1E2A44', w:'#FFFFFF', p:'#FF9DBB', y:'#FFDB7A' };
+  const TONE = { pink:'#FFE3EF', lav:'#EEE8FC', mint:'#E0F6EE' };
+  document.querySelectorAll('.pix[data-pix]').forEach(el => {
+    const g = PIX[el.dataset.pix]; if (!g) return;
+    const pal = Object.assign({}, PAL, el.dataset.tone ? { w:TONE[el.dataset.tone] } : {});
+    let r = '';
+    g.forEach((row, y) => { let x = 0; while (x < row.length) { const c = row[x]; let n = 1; while (row[x + n] === c) n++; if (c !== '.') r += `<rect x="${x}" y="${y}" width="${n}" height="1" fill="${pal[c]}"/>`; x += n; } });
+    el.innerHTML = `<svg viewBox="0 0 16 ${g.length}" aria-hidden="true">${r}</svg>`;
+  });
+
+  /* ---------- data ---------- */
+  const MEMBERS = ['시온','리쿠','유우시','재희','료','사쿠야'];
+  const SLUG = { '시온':'sion', '리쿠':'riku', '유우시':'yushi', '재희':'jaehee', '료':'ryo', '사쿠야':'sakuya' };
+  const MOMENTS = [
+    { id:'WM001', member:'재희', source:'ELLE JAPAN', date:'2025-12-26', type:'서면 인터뷰', format:'ARTICLE',
+      ja:'聞くって大事ですよね。', rd:'きくって だいじですよね。', ko:'듣는 게 중요하죠.',
+      vocab:[['聞く','きく','듣다, 묻다'],['大事','だいじ','중요함, 소중함 (な형용사)']],
+      grammar:['동사 기본형 + って: “~하는 건”이라는 회화체 주제 표시. 교과서식으로는 聞くことは / 聞くのは.','〜ですよね: 상대도 같은 생각일 거라 여기고 공감을 구하는 정중체.'],
+      tone:'정중하지만 딱딱하지 않은 인터뷰 말투예요. 친구 사이라면 だよね로 바꿔요.',
+      casual:'聞くって大事だよね。',
+      ex:[['休むって大事ですよね。','쉬는 거 중요하죠.'],['推しを応援するって大事だよね!','최애 응원하는 거 중요하지!']],
+      styles:['〜だよね','〜って'], origin:'check',
+      url:'https://www.elle.com/jp/culture/music-art-book/a69667358/nct-wish-interview-2512/' },
+    { id:'WM002', member:'재희', source:'NTV NEWS', date:'2026-10-03', type:'인터뷰 기사', format:'ARTICLE',
+      ja:'ちょっとずつ1日1ページくらいでやっています。', rd:'ちょっとずつ いちにち いちページくらいで やっています。', ko:'조금씩 하루에 한 페이지 정도 하고 있어요.',
+      vocab:[['ちょっとずつ','ちょっとずつ','조금씩 (少しずつ의 회화체)'],['1日','いちにち','하루'],['ページ','ぺーじ','페이지']],
+      grammar:['〜ずつ: ~씩','くらい: ~정도 (ぐらい도 가능)','〜で: 그 정도 페이스로','〜ています: 습관처럼 계속하고 있는 일. やる는 する의 회화체.'],
+      tone:'정중체(〜ています)에 ちょっと, やる 같은 회화 단어를 섞어, 겸손하고 편안하게 꾸준함을 말하는 느낌이에요.',
+      casual:'ちょっとずつ1日1ページくらいでやってる。',
+      ex:[['日本語、ちょっとずつ勉強しています。','일본어 조금씩 공부하고 있어요.'],['1日10分くらいでやってる!','하루 10분 정도로 하고 있어!']],
+      styles:['〜くらい','ちょっと'], origin:'check',
+      url:'https://news.livedoor.com/article/detail/32476996/' }
+  ];
+  /* 인터뷰 발췌: [원문, 히라가나, 뜻, 학습 포인트, 해설, 확인 메모] */
+  const SRC = {
+    '시온':['ELLE JAPAN','Korepo','Billboard JAPAN','Kstyle'],
+    '리쿠':['ELLE JAPAN','Billboard JAPAN','Kstyle','WEGO'],
+    '유우시':['ELLE JAPAN','Korepo','Billboard JAPAN','Kstyle'],
+    '재희':['ELLE JAPAN','WEGO','Korepo','Billboard JAPAN','Kstyle'],
+    '료':['ELLE JAPAN','Billboard JAPAN','Kstyle','WEGO'],
+    '사쿠야':['ELLE JAPAN','Billboard JAPAN','Kstyle','WEGO']
+  };
+  const DUP = '리쿠와 료의 목록에 같은 문장이 있어 실제 발언자를 확인하고 있어요.';
+  const RAW = {
+    '시온':[
+      ['もう1年が過ぎた','もう いちねんが すぎた','벌써 1년이 지났다','もう','もう는 벌써, 이미. 過ぎる는 시간이 지나다라는 뜻이에요.'],
+      ['時間が本当に早く','じかんが ほんとうに はやく','시간이 정말 빠르게','時間が経つのが早い','발췌라 뒤가 생략됐어요. 회화에서는 時間が経つのが本当に早い(시간 가는 게 정말 빨라)처럼 써요.'],
+      ['本当に楽しみです','ほんとうに たのしみです','정말 기대돼요','〜が楽しみ','楽しみ는 즐거움이 아니라 앞으로의 일이 기대됨. 컴백·공연 앞 단골 표현이에요.'],
+      ['緊張とときめき','きんちょうと ときめき','긴장과 설렘','감정 명사','ときめき는 가슴이 두근거리는 설렘. 동사형은 ときめく예요.'],
+      ['鮮明に記憶に残っています','せんめいに きおくに のこっています','선명하게 기억에 남아 있어요','記憶に残る','〜に残る(~에 남다)와 〜ています(상태 지속)가 합쳐져 지금도 남아 있다는 뜻이에요.'],
+      ['早くステージで披露したい','はやく すてーじで ひろうしたい','빨리 무대에서 선보이고 싶어요','〜たい','披露する는 공개해서 선보이다. 동사 ます형+たい는 ~하고 싶다예요.'],
+      ['本当の家族のような','ほんとうの かぞくの ような','진짜 가족 같은','〜のような','명사+のような+명사 = ~같은. 本当の家族のような存在처럼 이어져요.'],
+      ['何があっても','なにが あっても','무슨 일이 있어도','〜ても','〜ても는 ~해도. 何があっても応援するよ!처럼 팬레터에 바로 쓸 수 있어요.'],
+      ['もっと多くの人に','もっと おおくの ひとに','더 많은 사람들에게','もっと','もっと는 비교 대상 없이도 더. 多くの人는 많은 사람이에요.'],
+      ['これからも頑張ります','これからも がんばります','앞으로도 열심히 할게요','これからも','인터뷰 마무리 단골 문장. 팬은 これからも応援しています로 답해요.']
+    ],
+    '리쿠':[
+      ['たしかに','たしかに','그러게요, 확실히요','맞장구','상대 말에 동의하는 맞장구. 대화 중에 짧게 넣기 좋아요.'],
+      ['自然と身についてきた','しぜんと みに ついてきた','자연스럽게 몸에 익었어요','身につく','身につく는 기술·습관이 몸에 배다. 〜てきた는 지금까지 점점 변해 온 흐름이에요.'],
+      ['耳に残りやすい','みみに のこりやすい','귀에 잘 남아요','〜やすい','동사 ます형+やすい = ~하기 쉽다. 중독성 있는 곡을 칭찬할 때 써요.'],
+      ['ぴったりの曲','ぴったりの きょく','딱 맞는 곡','ぴったり','ぴったり는 꼭 맞음. 夏にぴったり(여름에 딱)처럼 に와 자주 써요.'],
+      ['どんなシーンでも','どんな しーんでも','어떤 상황에서도','どんな〜でも','どんな+명사+でも = 어떤 ~라도. シーン은 장면, 상황이에요.'],
+      ['自然に馴染む','しぜんに なじむ','자연스럽게 어울리다','馴染む','馴染む는 환경·분위기에 익숙해져 잘 어울리다는 뜻이에요.'],
+      ['雰囲気を活かしながら','ふんいきを いかしながら','분위기를 살리면서','〜ながら','活かす는 장점을 살리다. 〜ながら는 두 동작을 동시에 할 때 써요.'],
+      ['僕たちらしい雰囲気','ぼくたちらしい ふんいき','우리다운 분위기','〜らしい','명사+らしい = ~다운. 추측의 らしい(~인 것 같다)와 구별해요.', DUP],
+      ['不思議な気持ち','ふしぎな きもち','신기한 기분','감정 표현','不思議는 이상하면서도 신기한 느낌. 실감이 안 날 때 써요.'],
+      ['距離が近くなった','きょりが ちかくなった','사이가 가까워졌어요','距離が近い','물리적 거리뿐 아니라 마음의 거리에도 써요. い형용사 く형+なる = ~해지다.']
+    ],
+    '유우시':[
+      ['お、ありがとう','お、ありがとう','오, 고마워','자연스러운 반응','お는 가볍게 놀라거나 반가울 때 나오는 감탄. 반말 あ리がとう와 함께 친근한 리액션이에요.'],
+      ['明るい曲が多くて','あかるい きょくが おおくて','밝은 곡이 많아서','〜くて','い형용사의 い를 くて로 바꾸면 ~해서(이유·연결)가 돼요.'],
+      ['一緒に歌ったら','いっしょに うたったら','함께 노래하면','〜たら','〜たら는 ~하면. 뒤에 기대하는 결과가 이어져요.'],
+      ['絶対楽しいだろうな','ぜったい たのしいだろうな','분명 즐겁겠지','だろうな','だろうな는 혼잣말 같은 추측. 絶対(무조건)와 붙어 기대감이 커져요.'],
+      ['休みなしの曲','やすみなしの きょく','쉬는 구간이 없는 곡','〜なし','명사+なし = ~없음. 休みなし는 쉼 없이라는 뜻이에요.'],
+      ['アドレナリンが出ます','あどれなりんが でます','아드레날린이 나와요','〜が出る','〜が出る는 힘·에너지가 나다. 元気が出る와 같은 구조예요.'],
+      ['体に合っていて','からだに あっていて','몸에 잘 맞아서','〜に合う','〜に合う = ~에 맞다. 〜ていて는 지금의 상태를 이유로 이어요.'],
+      ['特に好きです','とくに すきです','특히 좋아해요','特に','여러 개 중 하나를 콕 집을 때. 〜の中で特に好きなのは…로도 써요.'],
+      ['これからも元気で','これからも げんきで','앞으로도 건강하게','これからも','元気で는 건강하게 지내라는 인사로도 써요. 팬레터 마무리에 좋아요.'],
+      ['楽しんで幸せになる','たのしんで しあわせに なる','즐기면서 행복해지다','〜て형 연결','〜て로 동작을 이어요. 幸せになる는 행복해지다예요.']
+    ],
+    '재희':[
+      ['優しいエネルギー','やさしい えねるぎー','부드러운 에너지','い형용사','優しい는 사람에게는 다정한, 소리·분위기에는 부드러운이라는 뜻이에요.'],
+      ['元気が出ます','げんきが でます','힘이 나요','元気が出る','노래·응원으로 힘이 날 때. 曲を聴くと元気が出ます처럼 써요.'],
+      ['心にすっと入ってくる','こころに すっと はいってくる','마음에 자연스럽게 스며들어요','〜てくる','すっと는 막힘없이 쓱. 〜てくる는 나를 향해 다가오는 방향이에요.'],
+      ['魅力だなと思いました','みりょくだなと おもいました','매력이라고 생각했어요','〜と思う','〜だな는 혼잣말 같은 감탄. と思う를 붙이면 생각을 부드럽게 말해요.'],
+      ['本当にきれいだった','ほんとうに きれいだった','정말 예뻐어요','과거형','な형용사 きれい의 과거는 きれいだった. 경치·무대 감상에 써요.'],
+      ['また時間ができたら','また じかんが できたら','또 시간이 생기면','〜たら','時間ができる는 시간이 나다. また〜たら로 다음을 약속하는 느낌이에요.'],
+      ['みんなで一緒に','みんなで いっしょに','다 같이 함께','みんなで','みんなで의 で는 ~끼리, ~이서라는 뜻이에요.'],
+      ['もっと多くのことを学び','もっと おおくのことを まなび','더 많은 것을 배우고','もっと','学び는 ます형으로 문장을 잇는 문어체 느낌. 회화라면 学んで라고 해요.'],
+      ['一緒に幸せな時間を','いっしょに しあわせな じかんを','함께 행복한 시간을','시간·감정 표현','뒤에 過ごしたい(보내고 싶다)가 자주 이어져요.']
+    ],
+    '료':[
+      ['毎日一緒にいるのに','まいにち いっしょに いるのに','매일 함께 있는데도','〜のに','〜のに는 예상과 다른 결과를 말할 때의 ~인데도예요.'],
+      ['こんなに盛り上がれる','こんなに もりあがれる','이렇게 신나게 놀 수 있다','盛り上がる','盛り上がる는 분위기가 달아오르다. 盛り上がれる는 가능형이에요.'],
+      ['本当に仲が良い','ほんとうに なかが いい','정말 사이가 좋아요','仲がいい','仲는 사이, 관계. 良い는 보통 いい로 읽어요. 仲良し는 사이좋은 친구예요.'],
+      ['まだ2年なんだ','まだ にねん なんだ','아직 2년이구나','まだ','なんだ는 새삼 깨달은 느낌의 반말. まだ는 아직이에요.'],
+      ['5年ぐらい会っている気分','ごねんぐらい あっている きぶん','5년 정도 만난 기분','〜ぐらい','ぐらい(くらい)는 정도. 〜気分은 ~한 기분이에요.'],
+      ['長く続いていくと嬉しい','ながく つづいていくと うれしい','오래 계속되면 기쁩 것 같아요','〜と嬉しい','〜と嬉しい는 ~하면 좋겠다를 부드럽게 바라는 말이에요.'],
+      ['明るく元気のあるエナジー','あかるく げんきのある えなじー','밝고 활기찬 에너지','〜のある','명사+のある = ~이 있는. い형용사는 く형으로 이어 꾸며요.'],
+      ['僕たちらしい雰囲気','ぼくたちらしい ふんいき','우리다운 분위기','〜らしい','명사+らしい = ~다운. 추측의 らしい(~인 것 같다)와 구별해요.', DUP],
+      ['全力で頑張る','ぜんりょくで がんばる','온 힘을 다해 노력하다','全力で','全力で는 전력으로. 팬도 全力で応援する로 써요.'],
+      ['一緒についてきて','いっしょに ついてきて','함께 따라와 주세요','ついてくる','ついてくる는 따라오다. 〜て로 끝내면 부드러운 부탁이 돼요.']
+    ],
+    '사쿠야':[
+      ['ワクワクしました','わくわく しました','설랜어요, 기대됐어요','의태어','ワクワク는 기대로 두근두근. ドキドキ는 긴장되는 두근거림이에요.'],
+      ['特に印象に残っている','とくに いんしょうに のこっている','특히 인상에 남아 있어요','印象に残る','印象に残る는 인상에 남다. 〜ている로 지금도 남아 있음을 나타내요.'],
+      ['たしかに','たしかに','그러게요','맞장구','상대 말에 동의하는 맞장구. 리쿠도 같은 말을 썼어요.'],
+      ['思ったよりも大きくて','おもったよりも おおきくて','생각보다 커서','〜より','思ったより(も)는 생각했던 것보다. も가 붙으면 놀라움이 더 커져요.'],
+      ['ビックリしました','びっくり しました','깜짝 놀랐어요','놀람 표현','びっくり는 히라가나·가타카나 모두 써요. 가타카나는 더 강조된 느낌이에요.'],
+      ['嬉しいなと思っています','うれしいなと おもっています','기쁘게 생각하고 있어요','〜と思う','〜なと思う로 감정을 부드럽게. 〜ています는 지금 계속 그렇게 느끼는 중이에요.'],
+      ['夏の浜辺で遊んでる','なつの はまべで あそんでる','여름 해변에서 놀고 있는','구어체 〜てる','遊んでる는 遊んでいる에서 い가 빠진 회화체예요.'],
+      ['爽やかさを感じました','さわやかさを かんじました','상쾌함을 느꼈어요','〜を感じる','爽やか(상쾌한)에 さ를 붙이면 명사가 돼요.'],
+      ['パリに行きたい','ぱりに いきたい','파리에 가고 싶어요','〜たい','장소+に行きたい = ~에 가고 싶다.'],
+      ['パンを食べに行きたい','ぱんを たべに いきたい','빵을 먹으러 가고 싶어요','〜に行く','동사 ます형+に行く = ~하러 가다.']
+    ]
+  };
+  let seq = 3;
+  Object.entries(RAW).forEach(([m, rows]) => rows.forEach(r => MOMENTS.push({
+    id:'WM' + String(seq++).padStart(3,'0'), member:m, ja:r[0], rd:r[1], ko:r[2], pt:r[3], note:r[4], dup:r[5] || '',
+    src:SRC[m], origin:(m === '시온' || m === '재희') ? 'check' : 'ja', format:'ARTICLE', brief:true
+  })));
+  /* 기사·방송·영상 자막 발언 (검증된 항목만) */
+  const RICH = [{"id":"WM-SION-04","member":"시온","ja":"素晴らしい末っ子たち…！","rd":"すばらしい すえっこたち…！","ro":"subarashii suekkotachi…!","ko":"훌륭한 막내들…!","keys":["末っ子: 막내 · 가족·그룹의 막내. K-POP 팬덤에서도 자주 쓰는 단어","〜たち: ~들 · 사람 명사의 복수형"],"grammar":"い형용사+명사로 감탄하기","sit":"막내 료와 사쿠야가 '꿈을 이루는 비결'을 멋지게 말하자 감탄하며","lvl":"N3","cat":"칭찬·리액션","src":{"kind":"article","pub":"モデルプレス","title":"【NCT WISHインタビュー】一番おしゃれなメンバーは誰？サクヤ「特にピンクが好き」","date":"2024-06-11","url":"https://mdpr.jp/interview/detail/4297484"},"origin":"check","rich":true},{"id":"WM-SION-05","member":"시온","ja":"美味しいものを食べながら行こう～！","rd":"おいしいものを たべながら いこう～！","ro":"oishiimono o tabenagara ikou~!","ko":"맛있는 거 먹으면서 가자~!","keys":["〜ながら: ~하면서 · 두 동작을 동시에 할 때","行こう: 가자 · 行く의 의지형. 친구에게 권유할 때"],"grammar":"동사 ます형+ながら / 동사 의지형(〜よう・〜おう)으로 권유","sit":"유우시가 목표로 '맛있는 걸 먹으며 건강하게 단독 콘서트'를 말하자 맞장구치며","lvl":"N4","cat":"멤버 간 대화","src":{"kind":"article","pub":"モデルプレス","title":"【NCT WISHインタビュー】一番おしゃれなメンバーは誰？サクヤ「特にピンクが好き」","date":"2024-06-11","url":"https://mdpr.jp/interview/detail/4297484"},"origin":"check","rich":true},{"id":"WM-SION-06","member":"시온","ja":"僕はおしゃれじゃない。","rd":"ぼくは おしゃれじゃない。","ro":"boku wa osharejanai.","ko":"저는 패셔너블하지 않아요.","keys":["おしゃれ: 멋쟁이, 세련됨 · 옷차림·센스가 좋다는 뜻의 な형용사","〜じゃない: ~가 아니다 · ではない의 구어체"],"grammar":"な형용사 부정형: 〜じゃない","sit":"리쿠가 '가장 패셔너블한 멤버'로 시온을 꼽자 겸손하게 부정하며","lvl":"N5","cat":"장난·겸손","src":{"kind":"article","pub":"モデルプレス","title":"【NCT WISHインタビュー】一番おしゃれなメンバーは誰？サクヤ「特にピンクが好き」","date":"2024-06-11","url":"https://mdpr.jp/interview/detail/4297484"},"origin":"check","rich":true},{"id":"WM-SION-07","member":"시온","ja":"リクくんも、イケメンです。","rd":"リクくんも、 イケメンです。","ro":"rikukunmo, ikemendesu.","ko":"리쿠도 잘생겼어요.","keys":["イケメン: 잘생긴 남자, 훈남 · 일상 회화에서 매우 자주 쓰는 칭찬","〜も: ~도 · 상대에게 칭찬을 돌려줄 때"],"grammar":"명사+も: 받은 칭찬을 되돌려주는 표현","sit":"리쿠가 '시온 형은 무대 위 표정이 잘생겼다'고 하자 칭찬을 돌려주며","lvl":"N5","cat":"칭찬·리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHリク、シオンとは「最初に会ったときから運命を感じた」【「Songbird」インタビューVol. 2】","date":"2024-07-26","url":"https://mdpr.jp/interview/detail/4330323"},"origin":"check","rich":true},{"id":"WM-SION-08","member":"시온","ja":"まだ会って1年ぐらいですけど、いきなり仲良くなりました。","rd":"まだ あって いちねん ぐらいですけど、 いきなり なかよく なりました。","ro":"mada atte ichinen guraidesukedo, ikinari nakayoku narimashita.","ko":"아직 만난 지 1년 정도인데, 금방 친해졌어요.","keys":["仲良くなる: 친해지다 · 仲良い→仲良く+なる","いきなり: 갑자기, 단번에 · 여기서는 '처음부터 바로'의 뉘앙스"],"grammar":"い형용사 く형+なる: '~하게 되다'","sit":"리쿠와의 관계를 설명하며","lvl":"N4","cat":"멤버 관계","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHリク、シオンとは「最初に会ったときから運命を感じた」【「Songbird」インタビューVol. 2】","date":"2024-07-26","url":"https://mdpr.jp/interview/detail/4330323"},"origin":"check","rich":true},{"id":"WM-SION-09","member":"시온","ja":"次は行こうよ！","rd":"つぎは いこうよ！","ro":"tsugi wa ikouyo!","ko":"다음엔 가자!","keys":["次は: 다음엔 · 아쉬움을 담아 다음을 약속할 때","〜よ: ~자!(강조) · 권유형 뒤에 붙어 적극적으로 권함"],"grammar":"동사 의지형+よ: 친구에게 적극 권유","sit":"멤버들이 온천에 가고 싶다는데 아직 못 갔다는 이야기에","lvl":"N5","cat":"멤버 간 대화","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"check","rich":true},{"id":"WM-SION-10","member":"시온","ja":"最近もっと仲良くなったので、休憩時間にみんなで遊ぶことがすごく多くなりました！","rd":"さいきん もっと なかよく なったので、 きゅうけいじかんに みんなで あそぶことが すごく おおく なりました！","ro":"saikin motto nakayoku nattanode, kyuukeijikanni minnade asobukotoga sugoku ooku narimashita!","ko":"요즘 더 친해져서, 쉬는 시간에 다 같이 노는 일이 엄청 많아졌어요!","keys":["〜ことが多い: ~하는 일이 많다 · 습관·빈도를 말할 때","みんなで: 다 같이 · で는 함께하는 인원"],"grammar":"동사 사전형+ことが多くなる: '~하는 일이 많아지다'","sit":"활동을 통해 멤버 사이가 어떻게 변했는지 묻자","lvl":"N3","cat":"멤버 관계","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"check","rich":true},{"id":"WM-RIKU-04","member":"리쿠","ja":"怖いのはやめてね。","rd":"こわいのは やめてね。","ro":"kowaino wa yametene.","ko":"무서운 건 하지 마.","keys":["やめて: 그만해, 하지 마 · やめる의 て형으로 가볍게 부탁","〜のは: ~인 것은 · 형용사+の로 명사화"],"grammar":"동사 て형+ね: 부드러운 부탁","sit":"시온이 리쿠 생일 서프라이즈를 계획 중이라고 하자","lvl":"N4","cat":"멤버 간 장난","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHリク、シオンとは「最初に会ったときから運命を感じた」【「Songbird」インタビューVol. 2】","date":"2024-07-26","url":"https://mdpr.jp/interview/detail/4330323"},"origin":"ja","rich":true},{"id":"WM-RIKU-05","member":"리쿠","ja":"結構趣味が合います。","rd":"けっこう しゅみが あいます。","ro":"kekkou shumiga aimasu.","ko":"취미가 꽤 잘 맞아요.","keys":["結構: 꽤, 제법 · 회화에서 매우 자주 쓰는 정도 부사","趣味が合う: 취미가 맞다 · 〜が合う: 성격·취향이 맞다"],"grammar":"명사+が合う","sit":"시온과의 공통점을 묻자","lvl":"N4","cat":"멤버 관계","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHリク、シオンとは「最初に会ったときから運命を感じた」【「Songbird」インタビューVol. 2】","date":"2024-07-26","url":"https://mdpr.jp/interview/detail/4330323"},"origin":"ja","rich":true},{"id":"WM-RIKU-06","member":"리쿠","ja":"シオンくん、けっこう僕と合うな？","rd":"シオンくん、 けっこう ぼくと あうな？","ro":"shionkun, kekkou bokuto auna?","ko":"시온 형, 꽤 나랑 잘 맞는데?","keys":["〜と合う: ~와 맞다 · 사람과 잘 맞을 때","〜な？: ~네? · 혼잣말처럼 깨달음을 나타내는 종조사"],"grammar":"문장 끝 な(혼잣말·깨달음)","sit":"처음 만나 이야기하다가 시온과 잘 맞는다고 느꼈던 순간을 회상하며(속마음 인용)","lvl":"N4","cat":"멤버 관계","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHリク、シオンとは「最初に会ったときから運命を感じた」【「Songbird」インタビューVol. 2】","date":"2024-07-26","url":"https://mdpr.jp/interview/detail/4330323"},"origin":"ja","rich":true},{"id":"WM-RIKU-07","member":"리쿠","ja":"そこからいっぱい甘えるようになりました。","rd":"そこから いっぱい あまえるように なりました。","ro":"sokokara ippai amaeruyouni narimashita.","ko":"그때부터 엄청 어리광 부리게 됐어요.","keys":["甘える: 어리광 부리다, 응석 부리다 · 한국어로 딱 맞는 말이 없는 일본어다운 단어","いっぱい: 많이 · たくさん의 구어체"],"grammar":"동사 사전형+ようになる: '~하게 되다(변화)'","sit":"시온과 친해진 과정을 이야기하며","lvl":"N3","cat":"멤버 관계","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHリク、シオンとは「最初に会ったときから運命を感じた」【「Songbird」インタビューVol. 2】","date":"2024-07-26","url":"https://mdpr.jp/interview/detail/4330323"},"origin":"ja","rich":true},{"id":"WM-RIKU-08","member":"리쿠","ja":"空気を明るくするために頑張ってくれているよね。","rd":"くうきを あかるく するために がんばって くれているよね。","ro":"kuuki o akaruku surutameni ganbatte kureteiruyone.","ko":"분위기를 밝게 하려고 애써 주고 있잖아.","keys":["空気: 분위기 · '공기'가 아니라 그 자리의 분위기","〜てくれる: ~해 주다 · 남이 나(우리)를 위해 해 줄 때"],"grammar":"い형용사 く+する / 〜ために / 〜てくれている","sit":"사쿠야가 '분위기 메이커'가 아니라고 부끄러워하자 멤버로서 칭찬하며","lvl":"N3","cat":"칭찬·응원","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"ja","rich":true},{"id":"WM-RIKU-09","member":"리쿠","ja":"僕も行ったことないけど（笑）。","rd":"ぼくも いったこと ないけど（わら）。","ro":"bokumo ittakoto naikedo(wara).","ko":"나도 가 본 적은 없지만 (웃음).","keys":["〜たことない: ~한 적 없다 · 경험 부정. 회화에서는 が를 자주 생략","〜けど: ~지만 · 말끝을 흐리는 구어체"],"grammar":"동사 た형+ことがない(が 생략)","sit":"유우시가 '후쿠이(리쿠 고향)에 추천 온천 있지?'라고 묻자","lvl":"N4","cat":"멤버 간 대화","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"ja","rich":true},{"id":"WM-RIKU-10","member":"리쿠","ja":"気楽にいられる。気を遣わない関係性になりました。","rd":"きらくに いられる。 きを つかわない かんけいせいに なりました。","ro":"kirakuni irareru. ki o tsukawanai kankeiseini narimashita.","ko":"편하게 있을 수 있어요. 눈치 보지 않는 관계가 됐어요.","keys":["気を遣う: 신경 쓰다, 눈치 보다 · 배려·조심하는 마음","気楽に: 마음 편히 · な형용사 気楽+に"],"grammar":"가능형 いられる / 명사+になる","sit":"데뷔 4개월 후 멤버 사이의 관계를 묻자","lvl":"N3","cat":"멤버 관계","src":{"kind":"article","pub":"THE FIRST TIMES","title":"【NCT WISH完全版】メンバー自らがプロフィールや関係性を語る！新曲「Songbird」への想いも","date":"2024-07-13","url":"https://www.thefirsttimes.jp/column/0000452389/"},"origin":"ja","rich":true},{"id":"WM-YUSHI-02","member":"유우시","ja":"僕はニット帽が好きなので、ニット帽をよく使います。","rd":"ぼくは ニットぼうが すきなので、 ニットぼうを よく つかいます。","ro":"boku wa nittobouga sukinanode, nittobou o yoku tsukaimasu.","ko":"저는 비니를 좋아해서 비니를 자주 써요.","keys":["ニット帽: 니트 모자, 비니 · 일본에서는 '비니'보다 이 말을 많이 씀","よく: 자주 · 빈도 부사"],"grammar":"な형용사+なので: 이유","sit":"패션에서 신경 쓰는 점을 묻자","lvl":"N5","cat":"취향 표현","src":{"kind":"article","pub":"モデルプレス","title":"【NCT WISHインタビュー】一番おしゃれなメンバーは誰？サクヤ「特にピンクが好き」","date":"2024-06-11","url":"https://mdpr.jp/interview/detail/4297484"},"origin":"ja","rich":true},{"id":"WM-YUSHI-03","member":"유우시","ja":"いや、リョウもおしゃれ。","rd":"いや、 リョウも おしゃれ。","ro":"iya, ryoumo oshare.","ko":"아니, 료도 패셔너블해.","keys":["いや、: 아니, · 상대 말을 가볍게 받아치거나 겸손하게 넘길 때","〜も: ~도 · 칭찬을 상대에게 돌려줌"],"grammar":"칭찬을 받았을 때 되돌려주는 리액션","sit":"료가 '유우시 형도 패셔너블하다'고 하자 바로 되돌려주며","lvl":"N5","cat":"칭찬·리액션","src":{"kind":"article","pub":"モデルプレス","title":"【NCT WISHインタビュー】一番おしゃれなメンバーは誰？サクヤ「特にピンクが好き」","date":"2024-06-11","url":"https://mdpr.jp/interview/detail/4297484"},"origin":"ja","rich":true},{"id":"WM-YUSHI-04","member":"유우시","ja":"知らなかったです（笑）。","rd":"しらなかったです（わら）。","ro":"shiranakattadesu(wara).","ko":"몰랐어요 (웃음).","keys":["知らなかった: 몰랐다 · 知る의 과거 부정","〜です: ~요 · 과거 부정에 です를 붙인 회화체 정중형"],"grammar":"동사 ない형 과거: 〜なかった","sit":"료가 자기 파트 동작을 사실 유우시를 참고했다고 고백하자","lvl":"N5","cat":"리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHユウシ、リョウは「めっちゃ抱きついてくる」【「Songbird」インタビューVol. 3】","date":"2024-07-27","url":"https://mdpr.jp/interview/detail/4330324"},"origin":"ja","rich":true},{"id":"WM-YUSHI-05","member":"유우시","ja":"…鳥って難しいな。","rd":"…とりって むずかしいな。","ro":"…toritte muzukashiina.","ko":"…새라니, 어렵네.","keys":["〜って: ~라는 건, ~란 · は의 구어체로 화제를 꺼냄","〜な: ~네 · 혼잣말 종조사"],"grammar":"명사+って(화제 제시)","sit":"'멤버를 새에 비유해 달라'는 질문에 고민하며","lvl":"N4","cat":"리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHユウシ、リョウは「めっちゃ抱きついてくる」【「Songbird」インタビューVol. 3】","date":"2024-07-27","url":"https://mdpr.jp/interview/detail/4330324"},"origin":"ja","rich":true},{"id":"WM-YUSHI-06","member":"유우시","ja":"すごくちょっかい出してきます。","rd":"すごく ちょっかい だして きます。","ro":"sugoku chokkai dashite kimasu.","ko":"엄청 장난을 걸어와요.","keys":["ちょっかいを出す: 집적거리다, 장난을 걸다 · 친한 사이의 귀찮게 하기","〜てくる: (나에게) ~해 오다 · 행동이 나를 향함"],"grammar":"동사 て형+くる: 방향성","sit":"료와의 관계를 한마디로 표현해 달라는 질문에","lvl":"N3","cat":"멤버 간 장난","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHユウシ、リョウは「めっちゃ抱きついてくる」【「Songbird」インタビューVol. 3】","date":"2024-07-27","url":"https://mdpr.jp/interview/detail/4330324"},"origin":"ja","rich":true},{"id":"WM-YUSHI-07","member":"유우시","ja":"めっちゃ抱きついてくることが多いんです（笑）。今日も撮影中後ろからしてきました。ね？","rd":"めっちゃ だきついて くることが おおいんです（わら）。 きょうも さつえいちゅう うしろから して きました。 ね？","ro":"meccha dakitsuite kurukotoga ooindesu(wara). kyoumo satsueichuu ushirokara shite kimashita. ne?","ko":"엄청 껴안는 일이 많아요 (웃음). 오늘도 촬영 중에 뒤에서 그랬어요. 그치?","keys":["抱きつく: 껴안다, 달려들어 안기다","ね？: 그치? · 상대에게 동의를 구하는 한마디"],"grammar":"〜ことが多いんです(설명의 の+です)","sit":"료가 장난을 건다는 말을 구체적으로 설명하며","lvl":"N3","cat":"멤버 간 장난","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHユウシ、リョウは「めっちゃ抱きついてくる」【「Songbird」インタビューVol. 3】","date":"2024-07-27","url":"https://mdpr.jp/interview/detail/4330324"},"origin":"ja","rich":true},{"id":"WM-YUSHI-08","member":"유우시","ja":"…（笑）。まあ、テンション上がる。","rd":"…（わら）。 まあ、 テンション あがる。","ro":"…(wara). maa, tenshon agaru.","ko":"…(웃음). 뭐, 텐션 올라가.","keys":["テンション上がる: 텐션 올라가다, 신나다 · 일본 젊은 층 필수 표현","まあ: 뭐, · 인정하면서 얼버무릴 때"],"grammar":"명사+(が)上がる, 조사 생략 구어","sit":"'맛있는 걸 먹으면 가장 텐션이 높아지는 멤버'로 지목되자 인정하며","lvl":"N4","cat":"리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"ja","rich":true},{"id":"WM-YUSHI-09","member":"유우시","ja":"福井におすすめの温泉があるんだよね？","rd":"ふくいに おすすめの おんせんが あるんだよね？","ro":"fukuini osusumeno onsenga arundayone?","ko":"후쿠이에 추천하는 온천이 있다며?","keys":["おすすめ: 추천 · お勧め. 일본 친구에게 무언가 물을 때 유용","〜んだよね？: ~라며?, ~지? · 알고 있는 걸 확인할 때"],"grammar":"〜んだよね？ 확인 의문","sit":"리쿠가 온천에 가고 싶다고 하자 리쿠의 고향 후쿠이 이야기를 꺼내며","lvl":"N4","cat":"멤버 간 대화","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"ja","rich":true},{"id":"WM-YUSHI-10","member":"유우시","ja":"いや違うけど！（笑）","rd":"いや ちがうけど！（わら）","ro":"iya chigaukedo!(wara)","ko":"아니 그건 아닌데! (웃음)","keys":["違う: 아니다, 다르다 · 회화에서 '그건 아니야'라는 부정으로 매우 자주 씀","〜けど！: ~인데! · 강하게 받아칠 때"],"grammar":"츳코미(태클) 리액션","sit":"사쿠야가 '전원 단 거 좋아하니까요!'라고 단언하자 태클 걸며","lvl":"N5","cat":"멤버 간 장난","src":{"kind":"article","pub":"THE FIRST TIMES","title":"【NCT WISH完全版】メンバー自らがプロフィールや関係性を語る！新曲「Songbird」への想いも","date":"2024-07-13","url":"https://www.thefirsttimes.jp/column/0000452389/"},"origin":"ja","rich":true},{"id":"WM-JAEHEE-03","member":"재희","ja":"今年の夏から漢字の勉強を始めました。","rd":"ことしの なつから かんじの べんきょうを はじめました。","ro":"kotoshino natsukara kanjino benkyou o hajimemashita.","ko":"올해 여름부터 한자 공부를 시작했어요.","keys":["〜から: ~부터 · 시작 시점","勉強を始める: 공부를 시작하다"],"grammar":"명사+を始めました","sit":"'YO-I-DON!'에 맞춰 이번 여름 새로 시작한 것을 묻자","lvl":"N5","cat":"자기 이야기","src":{"kind":"article","pub":"日テレNEWS NNN","title":"NCT WISHにインタビュー 最年少・リョウ&サクヤが10代のうちにしたいこと 今後の目標も","date":"2026-10-03","url":"https://news.ntv.co.jp/category/culture/7484dd0a787c4fb28ae4a8f95ad8958d"},"origin":"check","rich":true},{"id":"WM-JAEHEE-04","member":"재희","ja":"まだ無理です（笑）","rd":"まだ むりです（わら）","ro":"mada muridesu(wara)","ko":"아직 무리예요 (웃음)","keys":["まだ: 아직","無理: 무리, 불가능 · '못 해요'를 가볍게 말할 때 매우 자주 씀"],"grammar":"まだ+명사/형용사です","sit":"일본인 멤버 이름을 한자로 쓸 수 있냐는 질문에","lvl":"N5","cat":"리액션","src":{"kind":"article","pub":"日テレNEWS NNN","title":"NCT WISHにインタビュー 最年少・リョウ&サクヤが10代のうちにしたいこと 今後の目標も","date":"2026-10-03","url":"https://news.ntv.co.jp/category/culture/7484dd0a787c4fb28ae4a8f95ad8958d"},"origin":"check","rich":true},{"id":"WM-JAEHEE-05","member":"재희","ja":"一旦ひらがなとカタカナはマスターしました！","rd":"いったん ひらがなと カタカナは マスターしました！","ro":"ittan hiraganato katakana wa masutaashimashita!","ko":"일단 히라가나랑 가타카나는 마스터했어요!","keys":["一旦: 일단 · 한국어 '일단'과 같은 한자어","マスターする: 마스터하다 · 외래어+する 동사"],"grammar":"명사+は(대비): '한자는 아직이지만 가나는'","sit":"한자는 아직 무리라고 한 뒤 덧붙이며","lvl":"N4","cat":"자기 이야기","src":{"kind":"article","pub":"日テレNEWS NNN","title":"NCT WISHにインタビュー 最年少・リョウ&サクヤが10代のうちにしたいこと 今後の目標も","date":"2026-10-03","url":"https://news.ntv.co.jp/category/culture/7484dd0a787c4fb28ae4a8f95ad8958d"},"origin":"check","rich":true},{"id":"WM-JAEHEE-06","member":"재희","ja":"え、これパン屋さんじゃん！","rd":"え、 これ パンやさん じゃん！","ro":"e, kore panyasan jan!","ko":"어, 이거 빵집이잖아!","keys":["〜じゃん: ~잖아 · じゃないか의 구어 축약. 친구끼리 매우 자주 씀","パン屋さん: 빵집 · 가게 이름에 さん을 붙이는 일본어 습관"],"grammar":"명사+じゃん","sit":"자켓 사진 색이 예전 'WISH BAKERY' 콘텐츠에서 말한 것과 같다는 걸 알았을 때(당시 반응 인용)","lvl":"N4","cat":"리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHジェヒ＆サクヤ、お互いを鳥に例えると？【「Songbird」インタビューVol. 1】","date":"2024-07-25","url":"https://mdpr.jp/interview/detail/4330315"},"origin":"check","rich":true},{"id":"WM-JAEHEE-07","member":"재희","ja":"なんで？なんで？","rd":"なんで？ なんで？","ro":"nande? nande?","ko":"왜? 왜?","keys":["なんで: 왜 · どうして의 구어체"],"grammar":"의문사 반복으로 리액션","sit":"사쿠야가 재희를 '펭귄'에 비유하자","lvl":"N5","cat":"리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHジェヒ＆サクヤ、お互いを鳥に例えると？【「Songbird」インタビューVol. 1】","date":"2024-07-25","url":"https://mdpr.jp/interview/detail/4330315"},"origin":"check","rich":true},{"id":"WM-JAEHEE-08","member":"재희","ja":"え、本当（笑）？","rd":"え、 ほんとう（わら）？","ro":"e, hontou(wara)?","ko":"어, 진짜? (웃음)","keys":["本当？: 진짜? · 회화에서는 ほんと로 짧게도 말함"],"grammar":"감탄사 え + 의문 리액션","sit":"사쿠야가 '서 있는 모습과 아장아장 걷는 게 닮았다'고 하자","lvl":"N5","cat":"리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHジェヒ＆サクヤ、お互いを鳥に例えると？【「Songbird」インタビューVol. 1】","date":"2024-07-25","url":"https://mdpr.jp/interview/detail/4330315"},"origin":"check","rich":true},{"id":"WM-JAEHEE-09","member":"재희","ja":"みんなで話してぼーっとしたいです。","rd":"みんなで はなして ぼーっと したいです。","ro":"minnade hanashite bootto shitaidesu.","ko":"다 같이 이야기하면서 멍하니 있고 싶어요.","keys":["ぼーっとする: 멍때리다 · 아무 생각 없이 쉬는 모습","〜たい: ~하고 싶다 · 희망"],"grammar":"동사 て형으로 연결 + ます형+たいです","sit":"멤버들과 프라이빗으로 하고 싶은 일(여행)을 이야기하며","lvl":"N4","cat":"자기 이야기","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"check","rich":true},{"id":"WM-JAEHEE-10","member":"재희","ja":"幸せな気持ちになる人が1人だけでもいてくれたら、それだけでも奇跡だと思います。","rd":"しあわせな きもちに なる ひとが ひとり だけでも いて くれたら、 それだけでも きせきだと おもいます。","ro":"shiawasena kimochini naru hitoga hitori dakedemo ite kuretara, soredakedemo kisekidato omoimasu.","ko":"행복한 기분이 되는 사람이 단 한 명이라도 있어 준다면, 그것만으로도 기적이라고 생각해요.","keys":["〜だけでも: ~만이라도, ~만으로도","〜てくれたら: ~해 준다면 · 감사의 마음이 담긴 조건"],"grammar":"〜てくれたら / 〜だと思います","sit":"'Songbird'로 일으키고 싶은 기적을 묻자 팬을 향해","lvl":"N3","cat":"팬에게 감사","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHジェヒ＆サクヤ、お互いを鳥に例えると？【「Songbird」インタビューVol. 1】","date":"2024-07-25","url":"https://mdpr.jp/interview/detail/4330315"},"origin":"check","rich":true},{"id":"WM-RYO-04","member":"료","ja":"でも！でも実はそれはユウシくんを参考にしたんです…。","rd":"でも！ でも じつは それは ユウシくんを さんこうに したんです…。","ro":"demo! demo jitsu wa sore wa yuushikun o sankouni shitandesu….","ko":"근데! 근데 사실 그건 유우시 형을 참고한 거예요….","keys":["実は: 사실은 · 비밀을 털어놓을 때","〜を参考にする: ~를 참고하다"],"grammar":"〜んです(설명·고백)","sit":"유우시가 료의 파트가 멋있다고 칭찬하자 고백하며","lvl":"N3","cat":"멤버 관계","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHユウシ、リョウは「めっちゃ抱きついてくる」【「Songbird」インタビューVol. 3】","date":"2024-07-27","url":"https://mdpr.jp/interview/detail/4330324"},"origin":"ja","rich":true},{"id":"WM-RYO-05","member":"료","ja":"え～？ユウシくんはチュンチュン鳴いてそう。","rd":"え～？ ユウシくんは チュンチュン ないてそう。","ro":"e~? yuushikun wa chunchun naitesou.","ko":"에~? 유우시 형은 짹짹 울 것 같아.","keys":["チュンチュン: 짹짹 · 참새 울음소리 의성어","〜そう: ~할 것 같다 · 양태(겉보기 추측)"],"grammar":"동사 ます형+そう","sit":"유우시가 료를 '까마귀'에 비유하자 받아치며","lvl":"N4","cat":"멤버 간 장난","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHユウシ、リョウは「めっちゃ抱きついてくる」【「Songbird」インタビューVol. 3】","date":"2024-07-27","url":"https://mdpr.jp/interview/detail/4330324"},"origin":"ja","rich":true},{"id":"WM-RYO-06","member":"료","ja":"うん。でも、みんなによくしちゃいます（笑）。","rd":"うん。 でも、 みんなに よく しちゃいます（わら）。","ro":"un. demo, minnani yoku shichaimasu(wara).","ko":"응. 근데 다른 멤버들한테도 자주 해 버려요 (웃음).","keys":["〜ちゃう: ~해 버리다 · てしまう의 구어 축약","よく: 자주"],"grammar":"て형+しまう→ちゃう","sit":"유우시가 '료가 자꾸 껴안는다'고 폭로하자 인정하며","lvl":"N4","cat":"멤버 간 장난","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHユウシ、リョウは「めっちゃ抱きついてくる」【「Songbird」インタビューVol. 3】","date":"2024-07-27","url":"https://mdpr.jp/interview/detail/4330324"},"origin":"ja","rich":true},{"id":"WM-RYO-07","member":"료","ja":"最初、ユウシくんには「なんも喋んない人や」と思っていたんですけど","rd":"さいしょ、 ユウシくんには 「なんも しゃべんない ひとや」と おもっていたんですけど","ro":"saisho, yuushikunni wa (nanmo shabennai hitoya)to omotteitandesukedo","ko":"처음엔 유우시 형을 '아무 말도 안 하는 사람이네'라고 생각했었는데","keys":["〜や: ~이네(간사이 사투리) · 標準語 'だ'에 해당. 교토 출신 료의 사투리","喋んない: 말 안 하다 · 喋らない의 구어 축약"],"grammar":"〜と思っていた(과거의 생각) / 간사이벤 や","sit":"유우시의 첫인상과 지금의 차이를 이야기하며","lvl":"N3","cat":"멤버 관계","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHユウシ、リョウは「めっちゃ抱きついてくる」【「Songbird」インタビューVol. 3】","date":"2024-07-27","url":"https://mdpr.jp/interview/detail/4330324"},"origin":"ja","rich":true},{"id":"WM-RYO-08","member":"료","ja":"みんな上がるよ。","rd":"みんな あがるよ。","ro":"minna agaruyo.","ko":"다들 (텐션) 올라가.","keys":["上がる: 올라가다 · テンションが上がる의 줄임","〜よ: ~야 · 알려 주는 종조사"],"grammar":"주어+동사+よ 짧은 반응","sit":"사쿠야가 '맛있는 걸 먹으면 텐션 올라가죠'라고 하자","lvl":"N5","cat":"멤버 간 대화","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"ja","rich":true},{"id":"WM-RYO-09","member":"료","ja":"シオンくん！ いつも助手席乗ってるので乗せたいなと思って。","rd":"シオンくん！ いつも じょしゅせき のってるので のせたいなと おもって。","ro":"shionkun! itsumo joshuseki notterunode nosetainato omotte.","ko":"시온 형! 항상 조수석에 타니까 태워 주고 싶다고 생각해서요.","keys":["助手席: 조수석","乗る/乗せる: 타다/태우다 · 자동사·타동사 짝"],"grammar":"〜たいなと思って(희망을 부드럽게)","sit":"10대 안에 운전을 해 보고 싶다며 '조수석엔 누가 타냐'는 질문에","lvl":"N4","cat":"멤버 관계","src":{"kind":"article","pub":"日テレNEWS NNN","title":"NCT WISHにインタビュー 最年少・リョウ&サクヤが10代のうちにしたいこと 今後の目標も","date":"2026-10-03","url":"https://news.ntv.co.jp/category/culture/7484dd0a787c4fb28ae4a8f95ad8958d"},"origin":"ja","rich":true},{"id":"WM-RYO-10","member":"료","ja":"最近は宿舎に帰れても、ただ寝るだけですね。","rd":"さいきんは しゅくしゃに かえれても、 ただ ねる だけですね。","ro":"saikin wa shukushani kaeretemo, tada neru dakedesune.","ko":"요즘은 숙소에 돌아가도 그냥 자기만 해요.","keys":["〜ても: ~해도 · 역접 조건","ただ〜だけ: 그냥 ~할 뿐"],"grammar":"가능형 帰れる+ても / ただ〜だけ","sit":"바쁜 활동 때문에 숙소에서 함께할 시간이 없다며","lvl":"N3","cat":"자기 이야기","src":{"kind":"article","pub":"THE FIRST TIMES","title":"【NCT WISH完全版】メンバー自らがプロフィールや関係性を語る！新曲「Songbird」への想いも","date":"2024-07-13","url":"https://www.thefirsttimes.jp/column/0000452389/"},"origin":"ja","rich":true},{"id":"WM-SAKUYA-02","member":"사쿠야","ja":"僕はカラフルなファッションが多くて、特にピンクが好きです。","rd":"ぼくは カラフルな ファッションが おおくて、 とくに ピンクが すきです。","ro":"boku wa karafuruna fasshonga ookute, tokuni pinkuga sukidesu.","ko":"저는 컬러풀한 패션이 많고, 특히 핑크를 좋아해요.","keys":["カラフル: 컬러풀 · な형용사로 쓰는 외래어","〜くて: ~하고 · い형용사 연결"],"grammar":"い형용사 て형 연결 / 特に〜が好き","sit":"패션에서 신경 쓰는 점을 묻자","lvl":"N5","cat":"취향 표현","src":{"kind":"article","pub":"モデルプレス","title":"【NCT WISHインタビュー】一番おしゃれなメンバーは誰？サクヤ「特にピンクが好き」","date":"2024-06-11","url":"https://mdpr.jp/interview/detail/4297484"},"origin":"ja","rich":true},{"id":"WM-SAKUYA-03","member":"사쿠야","ja":"すごくて、毎回鳥肌が立っています。","rd":"すごくて、 まいかい とりはだが たっています。","ro":"sugokute, maikai torihadaga tatteimasu.","ko":"대단해서 매번 소름이 돋아요.","keys":["鳥肌が立つ: 소름이 돋다 · 감동했을 때 쓰는 관용 표현","毎回: 매번"],"grammar":"관용구 鳥肌が立つ + ている(반복 상태)","sit":"재희가 유우시와 고음으로 화음을 넣는 부분을 칭찬하며","lvl":"N3","cat":"칭찬·리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHジェヒ＆サクヤ、お互いを鳥に例えると？【「Songbird」インタビューVol. 1】","date":"2024-07-25","url":"https://mdpr.jp/interview/detail/4330315"},"origin":"ja","rich":true},{"id":"WM-SAKUYA-04","member":"사쿠야","ja":"（ジェヒは）ペンギンで！","rd":"（ジェヒは） ペンギンで！","ro":"(jiehi wa) penginde!","ko":"(재희 형은) 펭귄으로!","keys":["〜で: ~로 (할게요) · 선택할 때 '〜でお願いします'의 줄임"],"grammar":"명사+で！(선택·결정)","sit":"멤버를 새에 비유해 달라는 질문에 재희를 지목하며","lvl":"N5","cat":"멤버 간 장난","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHジェヒ＆サクヤ、お互いを鳥に例えると？【「Songbird」インタビューVol. 1】","date":"2024-07-25","url":"https://mdpr.jp/interview/detail/4330315"},"origin":"ja","rich":true},{"id":"WM-SAKUYA-05","member":"사쿠야","ja":"立ち姿と歩く姿がちょっと似ている。ちょこちょこ歩くところが（笑）。","rd":"たちすがたと あるく すがたが ちょっと にている。 ちょこちょこ あるく ところが（わら）。","ro":"tachisugatato aruku sugataga chotto niteiru. chokochoko aruku tokoroga(wara).","ko":"서 있는 모습이랑 걷는 모습이 좀 닮았어. 아장아장 걷는 게 (웃음).","keys":["ちょこちょこ: 아장아장, 종종걸음 · 귀엽게 걷는 모습의 의태어","似ている: 닮았다 · 似る는 보통 ている형으로 씀"],"grammar":"似ている / 동사+ところ","sit":"재희가 '왜 펭귄이냐'고 묻자 이유를 설명하며","lvl":"N3","cat":"멤버 간 장난","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHジェヒ＆サクヤ、お互いを鳥に例えると？【「Songbird」インタビューVol. 1】","date":"2024-07-25","url":"https://mdpr.jp/interview/detail/4330315"},"origin":"ja","rich":true},{"id":"WM-SAKUYA-06","member":"사쿠야","ja":"みんな食べることに集中しています（笑）。","rd":"みんな たべることに しゅうちゅうして います（わら）。","ro":"minna taberukotoni shuuchuushite imasu(wara).","ko":"다들 먹는 데 집중하고 있어요 (웃음).","keys":["〜に集中する: ~에 집중하다","食べること: 먹는 것 · 동사+こと 명사화"],"grammar":"동사 사전형+ことに〜する","sit":"대기실에서 주로 뭘 하냐는 질문에","lvl":"N4","cat":"멤버 이야기","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"ja","rich":true},{"id":"WM-SAKUYA-07","member":"사쿠야","ja":"おいしいものを食べたら（テンションが）上がりますよね。","rd":"おいしいものを たべたら （テンションが） あがりますよね。","ro":"oishiimono o tabetara (tenshonga) agarimasuyone.","ko":"맛있는 걸 먹으면 (텐션이) 올라가잖아요.","keys":["〜たら: ~하면","〜よね: ~잖아요 · 공감을 구하는 종조사"],"grammar":"〜たら + 〜ますよね(공감 유도)","sit":"자신도 분위기 메이커라고 지목되자","lvl":"N4","cat":"리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"ja","rich":true},{"id":"WM-SAKUYA-08","member":"사쿠야","ja":"そんなこと考えてない（照れ笑い）。","rd":"そんな こと かんがえてない（てれわらい）。","ro":"sonna koto kangaetenai(terewarai).","ko":"그런 거 생각 안 해 (쑥스러운 웃음).","keys":["そんなこと: 그런 거 · 부정하며 쑥스러워할 때","考えてない: 생각 안 해 · 考えていない의 い 생략"],"grammar":"〜ていない→〜てない 구어 축약","sit":"료와 리쿠가 '사실은 웃겨야 한다고 생각하고 있다'고 하자 부끄러워하며","lvl":"N4","cat":"리액션","src":{"kind":"article","pub":"モデルプレス","title":"NCT WISHが「もっと仲良くなった」理由 楽屋でのムードメーカーも発表【「Songbird」インタビュー集合編】","date":"2024-07-28","url":"https://mdpr.jp/interview/detail/4334491"},"origin":"ja","rich":true},{"id":"WM-SAKUYA-09","member":"사쿠야","ja":"僕はチキン南蛮をいっぱい食べたいです。","rd":"ぼくは チキンなんばんを いっぱい たべたいです。","ro":"boku wa chikinnanban o ippai tabetaidesu.","ko":"저는 치킨난반을 많이 먹고 싶어요.","keys":["チキン南蛮: 치킨난반 · 미야자키 발상의 튀김 닭에 타르타르소스를 얹은 요리","いっぱい: 잔뜩, 많이"],"grammar":"ます형+たいです","sit":"10대 안에 하고 싶은 일을 묻자","lvl":"N5","cat":"자기 이야기","src":{"kind":"article","pub":"日テレNEWS NNN","title":"NCT WISHにインタビュー 最年少・リョウ&サクヤが10代のうちにしたいこと 今後の目標も","date":"2026-10-03","url":"https://news.ntv.co.jp/category/culture/7484dd0a787c4fb28ae4a8f95ad8958d"},"origin":"ja","rich":true},{"id":"WM-SAKUYA-10","member":"사쿠야","ja":"全員甘党ですからね！","rd":"ぜんいん あまとう ですからね！","ro":"zen'in amatou desukarane!","ko":"전원 단 거 좋아하니까요!","keys":["甘党: 단 걸 좋아하는 사람 · 반대말은 辛党(술·짠 음식 좋아하는 사람)","〜からね！: ~니까요! · 단언하며 이유를 강조"],"grammar":"명사+ですからね","sit":"시온이 '다들 디저트를 좋아하니 맛집에 가고 싶다'고 하자 단언하며(직후 유우시가 태클)","lvl":"N3","cat":"멤버 간 장난","src":{"kind":"article","pub":"THE FIRST TIMES","title":"【NCT WISH完全版】メンバー自らがプロフィールや関係性を語る！新曲「Songbird」への想いも","date":"2024-07-13","url":"https://www.thefirsttimes.jp/column/0000452389/"},"origin":"ja","rich":true},{"id":"WM-SION-02","member":"시온","ja":"特にデザートとか甘いもの、めっちゃ大好き。","rd":"とくに デザートとか あまいもの、 めっちゃ だいすき。","ro":"tokuni dezaatotoka amaimono, meccha daisuki.","ko":"특히 디저트나 단 거 엄청 좋아해요.","keys":["〜とか: ~라든가, ~같은 거 · 예시를 가볍게 늘어놓는 구어 표현","甘いもの: 단 것 · '단 음식' 전반을 가리킴"],"grammar":"명사+とか: 회화에서 や 대신 많이 쓰는 예시 표현","sit":"좋아하는 음식을 이야기하며","lvl":"N4","cat":"취향 표현","src":{"kind":"broadcast","date":"2026-07-24","ts":"1:09"},"origin":"ja","rich":true},{"id":"WM-SION-03","member":"시온","ja":"日本では芋けんぴとか。","rd":"にほんでは いもけんぴとか。","ro":"nihonde wa imokenpitoka.","ko":"일본에서는 이모켄피(고구마 맛탕 과자) 같은 거요.","keys":["〜では: ~에서는 · 장소+で+は: 다른 곳과 대비","芋けんぴ: 이모켄피 · 가늘게 썬 고구마를 튀겨 설탕을 입힌 일본 과자"],"grammar":"문장 끝을 '〜とか。'로 끊는 구어체 대답","sit":"MC가 '가장 자주 먹는 단 음식이 뭐냐'고 묻자","lvl":"N5","cat":"취향 표현","src":{"kind":"broadcast","date":"2026-07-24","ts":"1:16"},"origin":"ja","rich":true},{"id":"WM-RIKU-01","member":"리쿠","ja":"なんか食べて、あ、ここ美味しいねとか、あ、ここ上手だねとか。","rd":"なんか たべて、 あ、 ここ おいしいねとか、 あ、 ここ じょうずだねとか。","ro":"nanka tabete, a, koko oishiinetoka, a, koko jouzudanetoka.","ko":"뭔가 먹고 나서 '아, 여기 맛있다'라든가 '아, 여기 잘하네'라든가 (말해요).","keys":["〜ね: ~네, ~다 · 감탄·공감을 나타내는 종조사","上手: 잘한다 · 가게 음식 솜씨를 평가할 때도 씀"],"grammar":"なんか(말 시작 필러) / 〜とか〜とか로 예시 나열","sit":"재희가 리쿠를 미식가로 뽑은 이유에 대해 리쿠 본인이 설명하며","lvl":"N4","cat":"리액션","src":{"kind":"broadcast","date":"2026-07-24","ts":"4:07"},"origin":"ja","rich":true},{"id":"WM-RIKU-02","member":"리쿠","ja":"1人で食べる時は、ま、表情は変わんない。","rd":"ひとりで たべる ときは、 ま、 ひょうじょうは かわんない。","ro":"hitoride taberu toki wa, ma, hyoujou wa kawannai.","ko":"혼자 먹을 때는 뭐, 표정은 안 바뀌어요.","keys":["変わんない: 안 바뀌어 · 変わらない의 구어 축약(ら→ん)","ま、: 뭐, · まあ의 축약. 말을 고를 때 쓰는 필러"],"grammar":"〜らない→〜んない 구어 축약","sit":"유우시가 '리쿠가 맛있게 먹는 걸 별로 본 적 없다'고 하자 해명하며","lvl":"N4","cat":"자기 이야기","src":{"kind":"broadcast","date":"2026-07-24","ts":"3:16"},"origin":"ja","rich":true},{"id":"WM-RIKU-03","member":"리쿠","ja":"いや、お前誰やねん。","rd":"いや、 おまえ だれやねん。","ro":"iya, omae dareyanen.","ko":"아니, 너 누군데. (너 뭐야ㅋㅋ)","keys":["〜やねん: ~인 거야(간사이 사투리) · 標準語 'なんだよ'에 해당. 츳코미(태클)할 때 자주 씀","お前: 너 · 친한 친구끼리 쓰는 거친 2인칭. 윗사람에게는 쓰지 않음"],"grammar":"간사이벤 츳코미: 誰やねん = 誰なんだよ","sit":"재희가 음식점을 셰프처럼 '여기 잘하네'라고 평가하자 태클 걸며","lvl":"N3","cat":"멤버 간 장난","src":{"kind":"broadcast","date":"2026-07-24","ts":"4:37"},"origin":"ja","rich":true},{"id":"WM-YUSHI-01","member":"유우시","ja":"なんか美味しく食べてるところはあんまり見たことない。","rd":"なんか おいしく たべてる ところは あんまり みたこと ない。","ro":"nanka oishiku tabeteru tokoro wa anmari mitakoto nai.","ko":"뭔가 맛있게 먹는 모습은 별로 본 적이 없어요.","keys":["あんまり〜ない: 별로 ~않다 · あまり의 구어체","〜てるところ: ~하고 있는 모습/장면 · ている의 い 생략"],"grammar":"동사 て형+(い)るところ / た형+ことない","sit":"'식사에 무관심한 멤버'로 리쿠를 뽑은 이유를 묻자","lvl":"N4","cat":"멤버 간 장난","src":{"kind":"broadcast","date":"2026-07-24","ts":"3:03"},"origin":"ja","rich":true},{"id":"WM-JAEHEE-01","member":"재희","ja":"なんか他の店より美味しかったら、あ、この店はちょっと上手ですね。","rd":"なんか ほかの みせより おいしかったら、 あ、 この みせは ちょっと じょうずですね。","ro":"nanka hokano miseyori oishikattara, a, kono mise wa chotto jouzudesune.","ko":"다른 가게보다 맛있으면 '아, 이 가게는 좀 잘하네요'라고 해요.","keys":["〜より: ~보다 · 비교","〜かったら: ~하면 · い형용사 조건형"],"grammar":"い형용사 た형+ら(조건) / AよりB","sit":"MC가 재희가 음식을 분석하듯 평가하냐고 묻자 설명하며","lvl":"N4","cat":"리액션","src":{"kind":"broadcast","date":"2026-07-24","ts":"4:25"},"origin":"ja","rich":true},{"id":"WM-RYO-01","member":"료","ja":"大体どんなご飯でも多分みんなバクバク食べる。","rd":"だいたい どんな ごはんでも たぶん みんな バクバク たべる。","ro":"daitai donna gohandemo tabun minna bakubaku taberu.","ko":"대체로 어떤 밥이든 아마 다들 우걱우걱 잘 먹어요.","keys":["バクバク: 우걱우걱, 왕성하게 · 먹는 모습을 나타내는 의태어","どんな〜でも: 어떤 ~라도"],"grammar":"どんな+명사+でも / 의태어+동사","sit":"'식사에 무관심한 멤버'가 없다는 결과에 대해","lvl":"N4","cat":"멤버 이야기","src":{"kind":"broadcast","date":"2026-07-24","ts":"2:40"},"origin":"ja","rich":true},{"id":"WM-RYO-03","member":"료","ja":"今回はBOY MEETS GIRLという楽曲をパフォーマンスさせていただくんですけど","rd":"こんかいは BOY MEETS GIRLと いう がっきょくを パフォーマンス させて いただくんですけど","ro":"konkai wa BOY MEETS GIRLto iu gakkyoku o pafoomansu sasete itadakundesukedo","ko":"이번에는 'BOY MEETS GIRL'이라는 곡을 퍼포먼스하게 되었는데요","keys":["〜させていただく: ~하게 되다(겸양) · 방송·공식 자리에서 쓰는 정중한 표현","〜という: ~라는 · 이름 소개"],"grammar":"사역형+ていただく(겸양) / 〜んですけど(설명 도입)","sit":"MC가 오늘 선보일 곡을 묻자","lvl":"N2","cat":"공식 멘트","src":{"kind":"broadcast","date":"2026-07-24","ts":"6:27"},"origin":"ja","rich":true},{"id":"V-riku-01","member":"리쿠","ja":"何でそんな笑ってんの？","rd":"なんでそんなわらってんの？","ro":"nande sonna waratten no?","ko":"왜 그렇게 웃고 있어?","keys":["笑ってんの = 笑っているの의 구어 축약 (い 탈락 + の→ん)","なんで: '왜'의 회화체 (なぜ보다 캐주얼)"],"grammar":"","sit":"친구가 이유 없이 웃을 때 가볍게 태클 거는 말","lvl":"초급","cat":"","src":{"kind":"fan","ts":"1:08"},"origin":"ja","rich":true},{"id":"V-riku-02","member":"리쿠","ja":"いや、別にもう普通にしゃべってればいいんじゃない？","rd":"いや、べつにもうふつうにしゃべってればいいんじゃない？","ro":"iya, betsu ni mou futsuu ni shabettereba ii n ja nai?","ko":"아니, 그냥 평소처럼 얘기하면 되는 거 아니야?","keys":["～ればいいんじゃない？: '~하면 되지 않아?' 부드러운 제안","しゃべってれば = しゃべっていれば (い 탈락)","別に: '딱히, 그냥'"],"grammar":"","sit":"긴장한 친구에게 편하게 하라고 조언할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"1:14"},"origin":"ja","rich":true},{"id":"V-riku-03","member":"리쿠","ja":"こんなでけぇの、いつつけるんだよお前","rd":"こんなでけぇの、いつつけるんだよおまえ","ro":"konna dekee no, itsu tsukeru n da yo omae","ko":"이렇게 큰 거 언제 찰 건데, 너","keys":["でけぇ = でかい의 남성적 구어 발음 (ai→ee)","～んだよ: 추궁·따지는 뉘앙스","お前: 아주 친한 사이에서만 쓰는 '너'"],"grammar":"","sit":"친구의 물건을 보고 장난스럽게 태클 걸 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"1:21"},"origin":"ja","rich":true},{"id":"V-riku-04","member":"리쿠","ja":"あ、ほら全然余裕やん","rd":"あ、ほらぜんぜんよゆうやん","ro":"a, hora zenzen yoyuu yan","ko":"아, 봐 완전 괜찮네","keys":["余裕: '여유, 문제없음' → 全然余裕 = 전혀 문제없다","やん: じゃん에 해당하는 서일본식 어미","ほら: '봐, 거봐'"],"grammar":"","sit":"걱정했던 일이 별것 아닐 때 리액션","lvl":"중급","cat":"","src":{"kind":"fan","ts":"1:24"},"origin":"ja","rich":true},{"id":"V-riku-05","member":"리쿠","ja":"日本語チャラいよな、マジで","rd":"にほんごチャラいよな、マジで","ro":"nihongo charai yo na, maji de","ko":"일본어 말투 가볍죠, 진짜로","keys":["チャラい: 가볍다, 날라리 같다 (젊은층 구어)","マジで: 진짜로","よな: 상대에게 동의를 구하는 어미"],"grammar":"","sit":"자기 말투에 대해 셀프 디스하며 동의를 구할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"1:41"},"origin":"ja","rich":true},{"id":"V-riku-06","member":"리쿠","ja":"ちょっとライブみたいな","rd":"ちょっとライブみたいな","ro":"chotto raibu mitai na","ko":"약간 라이브 같은 거?","keys":["～みたいな: 문장 끝을 흐리며 '~같은 거?'라고 얼버무리는 구어","ちょっと: '약간'"],"grammar":"","sit":"뭘 하냐는 질문에 대충 설명할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"1:55"},"origin":"ja","rich":true},{"id":"V-riku-07","member":"리쿠","ja":"ごめんね〜","rd":"ごめんね〜","ro":"gomen ne~","ko":"미안~","keys":["ごめん + ね: 부드럽고 다정한 사과","ごめんなさい보다 캐주얼"],"grammar":"","sit":"친구에게 가볍게 사과할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"2:39"},"origin":"ja","rich":true},{"id":"V-riku-08","member":"리쿠","ja":"でもね、最近できないんだよね","rd":"でもね、さいきんできないんだよね","ro":"demo ne, saikin dekinai n da yo ne","ko":"근데 요즘 (사투리가) 안 나와","keys":["～んだよね: 자기 사정을 설명하며 공감을 구하는 어미","でもね: '근데 있잖아'"],"grammar":"","sit":"요청을 들어주기 어려운 이유를 부드럽게 설명할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"2:52"},"origin":"ja","rich":true},{"id":"V-riku-09","member":"리쿠","ja":"使いたいんですよ","rd":"つかいたいんですよ","ro":"tsukaitai n desu yo","ko":"쓰고 싶어요","keys":["～たい: 희망","～んですよ: 사정·마음을 설명하는 정중체"],"grammar":"","sit":"하고 싶은 마음을 정중하게 전할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"2:53"},"origin":"ja","rich":true},{"id":"V-riku-10","member":"리쿠","ja":"標準語なっちゃうの","rd":"ひょうじゅんごなっちゃうの","ro":"hyoujungo nacchau no","ko":"표준어가 돼 버려","keys":["～ちゃう = ～てしまう 축약 (의도치 않게 ~해 버리다)","조사 に 생략 (標準語に→標準語)","文末 の: 사정 설명 (여성적·부드러운 느낌)"],"grammar":"","sit":"습관이 바뀌어 버렸다고 설명할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"2:57"},"origin":"ja","rich":true},{"id":"V-ryo-01","member":"료","ja":"あ〜見んといてや","rd":"あ〜みんといてや","ro":"aa, min to ite ya","ko":"아~ 보지 마~ (채널 자막: 아~ 왜 보는데~)","keys":["見んといて = 見ないで (간사이벤)","や: 간사이벤 종조사 (부탁·강조)"],"grammar":"","sit":"쳐다보는 친구에게 장난스럽게 하는 말","lvl":"중급","cat":"","src":{"kind":"fan","ts":"5:17"},"origin":"ja","rich":true},{"id":"V-ryo-02","member":"료","ja":"見たら出えへんやん","rd":"みたらでえへんやん","ro":"mitara deehen yan","ko":"보면 안 나오잖아","keys":["出えへん = 出ない (간사이벤 부정 へん)","やん = じゃん","표준어: 見たら出ないじゃん"],"grammar":"","sit":"방해받아서 뭔가가 안 될 때 투덜거리기","lvl":"중급","cat":"","src":{"kind":"fan","ts":"5:19"},"origin":"ja","rich":true},{"id":"V-ryo-03","member":"료","ja":"水遊びしな","rd":"みずあそびしな","ro":"mizuasobi shi na","ko":"물놀이 해~","keys":["～しな = しなさい의 부드러운 권유 (부정 '하지 마'가 아님에 주의)","水遊び: 물놀이"],"grammar":"","sit":"동물·아이에게 다정하게 권할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"7:00"},"origin":"ja","rich":true},{"id":"V-ryo-04","member":"료","ja":"楽しかったです！","rd":"たのしかったです！","ro":"tanoshikatta desu!","ko":"즐거웠어요!","keys":["い형용사 과거: 楽しい → 楽しかった","です를 붙여 정중하게"],"grammar":"","sit":"끝난 일정·여행의 소감을 말할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"7:11"},"origin":"ja","rich":true},{"id":"V-ryo-05","member":"료","ja":"マ？","rd":"マ？","ro":"ma?","ko":"진짜? (マジ의 줄임)","keys":["マ = マジ(진짜)를 한 글자로 줄인 젊은층 슬랭"],"grammar":"","sit":"친한 친구끼리 놀랐을 때 초단문 리액션","lvl":"중급","cat":"","src":{"kind":"fan","ts":"7:19"},"origin":"ja","rich":true},{"id":"V-ryo-06","member":"료","ja":"えぐっ","rd":"えぐっ","ro":"egu'","ko":"쩐다 / 미쳤다","keys":["えぐい: 대단하다·심하다 (좋은 의미/나쁜 의미 모두)","어간 + っ: 짧은 감탄형"],"grammar":"","sit":"놀라운 것을 봤을 때 리액션","lvl":"중급","cat":"","src":{"kind":"fan","ts":"7:35"},"origin":"ja","rich":true},{"id":"V-ryo-07","member":"료","ja":"あ、ちょっと何してんねん！お前！","rd":"あ、ちょっとなにしてんねん！おまえ！","ro":"a, chotto nani shiten nen! omae!","ko":"아 잠깐, 뭐 하는 거야?! 너!","keys":["してんねん = しているんだ (간사이벤 ねん = のだ)","ちょっと: '잠깐!' 제지하는 감탄"],"grammar":"","sit":"멤버의 엉뚱한 행동에 츳코미(태클)","lvl":"중급","cat":"","src":{"kind":"fan","ts":"7:52"},"origin":"ja","rich":true},{"id":"V-ryo-08","member":"료","ja":"嘘つけ！お前これ一番美味しく食べたくせに","rd":"うそつけ！おまえこれいちばんおいしくたべたくせに","ro":"usotsuke! omae kore ichiban oishiku tabeta kuse ni","ko":"거짓말 마! 너 이거 제일 맛있게 먹었으면서","keys":["嘘つけ: '거짓말 마!' (명령형 관용 표현)","～くせに: '~한 주제에, ~했으면서' 비난·놀림","美味しく食べる: 맛있게 먹다 (형용사 부사형)"],"grammar":"","sit":"친구가 말과 다르게 행동했을 때 장난스럽게 반박","lvl":"중급","cat":"","src":{"kind":"fan","ts":"7:58"},"origin":"ja","rich":true},{"id":"V-ryo-09","member":"료","ja":"普通に聞け！","rd":"ふつうにきけ！","ro":"futsuu ni kike!","ko":"평범하게 좀 들어!","keys":["聞け: 聞く의 명령형 (친한 사이 장난 톤)","普通に: '평범하게, 그냥'"],"grammar":"","sit":"장난치는 친구에게 츳코미","lvl":"초급","cat":"","src":{"kind":"fan","ts":"8:01"},"origin":"ja","rich":true},{"id":"V-ryo-10","member":"료","ja":"まあ、一生そんなのに金使いそう","rd":"まあ、いっしょうそんなのにかねつかいそう","ro":"maa, isshou sonna no ni kane tsukaisou","ko":"뭐, 평생 그런 데에 돈 쓸 것 같아 (너)","keys":["～そう: 동사 ます형 + そう = '~할 것 같다' (양태)","金 = お金의 남성적 구어","一生: 평생"],"grammar":"","sit":"친구의 소비 습관을 놀릴 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"8:19"},"origin":"ja","rich":true},{"id":"V-sakuya-01","member":"사쿠야","ja":"レシピがない方がね〜","rd":"レシピがないほうがね〜","ro":"reshipi ga nai hou ga ne~","ko":"레시피가 없는 편이~","keys":["～方が(いい): '~하는 편이 (낫다)' — 뒷부분 생략","ね〜: 동의를 끌어내는 늘인 어미"],"grammar":"","sit":"자기 스타일을 은근히 주장할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"8:02"},"origin":"ja","rich":true},{"id":"V-sakuya-02","member":"사쿠야","ja":"本当はいいよ〜","rd":"ほんとうはいいよ〜","ro":"hontou wa ii yo~","ko":"사실은 (없는 게) 좋아~","keys":["本当は: '사실은'","いいよ: '좋아, 괜찮아'"],"grammar":"","sit":"반박당했을 때 능청스럽게 우기기","lvl":"초급","cat":"","src":{"kind":"fan","ts":"8:06"},"origin":"ja","rich":true},{"id":"V-sakuya-03","member":"사쿠야","ja":"今度買いに行こう","rd":"こんどかいにいこう","ro":"kondo kai ni ikou","ko":"다음에 사러 가자","keys":["동사 ます형 + に行く: '~하러 가다'","行こう: 의지형 '가자'","今度: 다음번에"],"grammar":"","sit":"친구에게 같이 가자고 제안할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"8:14"},"origin":"ja","rich":true},{"id":"V-sakuya-04","member":"사쿠야","ja":"とんでもないことになってる人生みたいな","rd":"とんでもないことになってるじんせいみたいな","ro":"tondemonai koto ni natteru jinsei mitai na","ko":"엄청난 일이 벌어지고 있는 인생 같은","keys":["とんでもない: 터무니없는, 엄청난","～ことになる: '~한 상황이 되다'","なってる = なっている"],"grammar":"","sit":"꿈·상상에 대해 이야기할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"9:55"},"origin":"ja","rich":true},{"id":"V-sakuya-05","member":"사쿠야","ja":"いつものやってくれない？","rd":"いつものやってくれない？","ro":"itsumo no yatte kurenai?","ko":"항상 하던 거 해 줄래?","keys":["～てくれない？: 친근한 부탁 '~해 줄래?'","いつもの: '늘 하던 그것'"],"grammar":"","sit":"친구에게 익숙한 것을 부탁할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"10:02"},"origin":"ja","rich":true},{"id":"V-sakuya-06","member":"사쿠야","ja":"本当に？","rd":"ほんとうに？","ro":"hontou ni?","ko":"진짜??","keys":["놀람·의심을 나타내는 기본 리액션"],"grammar":"","sit":"상대 말에 놀랐을 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"10:22"},"origin":"ja","rich":true},{"id":"V-sakuya-07","member":"사쿠야","ja":"ちょっと休憩する？","rd":"ちょっときゅうけいする？","ro":"chotto kyuukei suru?","ko":"좀 쉴래?","keys":["休憩する: 쉬다, 휴식하다","평서문 + 상승조 ？ = 제안"],"grammar":"","sit":"함께 있는 사람에게 휴식을 권할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"10:25"},"origin":"ja","rich":true},{"id":"V-sakuya-08","member":"사쿠야","ja":"水飲む君","rd":"みずのむきみ","ro":"mizu nomu kimi","ko":"너 물 마실래?","keys":["주어를 뒤로 보내는 도치 (회화체)","조사 を 생략 (水を飲む → 水飲む)","君: 친근하게 부르는 '너'"],"grammar":"","sit":"상대를 챙겨 줄 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"10:27"},"origin":"ja","rich":true},{"id":"V-sakuya-09","member":"사쿠야","ja":"ここにずっといろ！分かったか？動くな","rd":"ここにずっといろ！わかったか？うごくな","ro":"koko ni zutto iro! wakatta ka? ugoku na","ko":"여기 계속 있어! 알았어? 움직이지 마","keys":["いろ: いる의 명령형","動くな: 동사 원형 + な = 금지","分かったか: 남성적 확인 표현"],"grammar":"","sit":"멤버끼리 애니 대사처럼 장난칠 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"11:50"},"origin":"ja","rich":true},{"id":"V-sakuya-10","member":"사쿠야","ja":"じゃあ、入るようにしてあげるよ","rd":"じゃあ、はいるようにしてあげるよ","ro":"jaa, hairu you ni shite ageru yo","ko":"그럼 들어가도록 해 줄게","keys":["～ようにする: '~하도록 하다'","～てあげる: '~해 주다'"],"grammar":"","sit":"장난스럽게 '복수'를 선언할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"11:56"},"origin":"ja","rich":true},{"id":"V-yushi-01","member":"유우시","ja":"なにが〜あるん〜","rd":"なにが〜あるん〜","ro":"nani ga~ aru n~","ko":"뭐~가 있~나~","keys":["あるん = あるの (서일본식 축약)","말끝을 늘여 혼잣말처럼"],"grammar":"","sit":"가게를 둘러보며 혼잣말할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"13:06"},"origin":"ja","rich":true},{"id":"V-yushi-03","member":"유우시","ja":"付けたい？","rd":"つけたい？","ro":"tsuketai?","ko":"껴 보고 싶어?","keys":["付ける: (반지·액세서리 등을) 착용하다","～たい？: '~하고 싶어?'"],"grammar":"","sit":"친구에게 물건을 권할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"13:38"},"origin":"ja","rich":true},{"id":"V-yushi-04","member":"유우시","ja":"え、手あれか、太いか？","rd":"え、てあれか、ふといか？","ro":"e, te are ka, futoi ka?","ko":"에? 손이 그건가, 두꺼운가?","keys":["あれ: 단어가 바로 안 떠오를 때 쓰는 대용어","か: 혼잣말 같은 의문"],"grammar":"","sit":"생각하면서 말을 이어 갈 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"13:41"},"origin":"ja","rich":true},{"id":"V-yushi-05","member":"유우시","ja":"Tシャツにさ、こう描いてたら可愛くない？","rd":"ティーシャツにさ、こうかいてたらかわいくない？","ro":"tiishatsu ni sa, kou kaitetara kawaikunai?","ko":"티셔츠에 이렇게 그려져 있으면 귀엽지 않아?","keys":["さ: 말 사이에 넣는 간투사 '있잖아'","～たら: 가정","可愛くない？(상승조) = '귀엽지 않아?' (부정이 아니라 동의 구하기)"],"grammar":"","sit":"아이디어를 친구에게 공유할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"13:44"},"origin":"ja","rich":true},{"id":"V-yushi-06","member":"유우시","ja":"どう？","rd":"どう？","ro":"dou?","ko":"어때?","keys":["의견을 묻는 가장 기본적인 한 마디"],"grammar":"","sit":"보여 준 것에 대한 반응을 물을 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"13:48"},"origin":"ja","rich":true},{"id":"V-yushi-07","member":"유우시","ja":"え、怖い、なんか急に怖くなってきた","rd":"え、こわい、なんかきゅうにこわくなってきた","ro":"e, kowai, nanka kyuu ni kowaku natte kita","ko":"에 무서워, 뭔가 갑자기 무서워졌어","keys":["い형용사 + くなってきた: 점점 ~해지다 (변화)","なんか: '뭔가' (회화 필러)"],"grammar":"","sit":"감정 변화를 실시간으로 말할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"14:17"},"origin":"ja","rich":true},{"id":"V-yushi-08","member":"유우시","ja":"知らん","rd":"しらん","ro":"shiran","ko":"몰라","keys":["知らない의 축약 (무심한 말투)"],"grammar":"","sit":"대답하기 귀찮거나 장난스럽게 넘길 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"14:39"},"origin":"ja","rich":true},{"id":"V-yushi-09","member":"유우시","ja":"何言ってんのお前","rd":"なにいってんのおまえ","ro":"nani itten no omae","ko":"뭐라는 거야 너","keys":["言ってんの = 言っているの","お前: 친한 사이의 '너'"],"grammar":"","sit":"엉뚱한 말을 한 친구에게 츳코미","lvl":"초급","cat":"","src":{"kind":"fan","ts":"14:57"},"origin":"ja","rich":true},{"id":"V-yushi-10","member":"유우시","ja":"早いな、お前","rd":"はやいな、おまえ","ro":"hayai na, omae","ko":"너무 빨라, 너","keys":["な: 감탄 종조사 (혼잣말·남성적)"],"grammar":"","sit":"상대가 너무 서두를 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"15:03"},"origin":"ja","rich":true},{"id":"V-sion-01","member":"시온","ja":"バラエティも楽しかったし","rd":"バラエティもたのしかったし","ro":"baraeti mo tanoshikatta shi","ko":"버라이어티도 재밌었고","keys":["～し: 이유·사실을 나열 '~하고'","楽しかった: い형용사 과거"],"grammar":"","sit":"좋았던 경험을 나열할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"2:12"},"origin":"ja","rich":true},{"id":"V-sion-02","member":"시온","ja":"日本では、芋けんぴとか","rd":"にほんでは、いもけんぴとか","ro":"nihon de wa, imokenpi toka","ko":"일본에서는 이모켄피(고구마 스낵)나","keys":["～では: 장소 대비 '~에서는'","～とか: 예시 '~라든가'","芋けんぴ: 고구마 맛탕 스틱 과자"],"grammar":"","sit":"좋아하는 것을 예로 들 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"3:11"},"origin":"ja","rich":true},{"id":"V-sion-03","member":"시온","ja":"久しぶりに光合成もたくさんして","rd":"ひさしぶりにこうごうせいもたくさんして","ro":"hisashiburi ni kougousei mo takusan shite","ko":"오랜만에 광합성도 많이 하고","keys":["光合成する: 햇볕을 쬐다 (유머러스한 비유)","久しぶりに: 오랜만에"],"grammar":"","sit":"야외에서 쉬었던 경험을 말할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"3:22"},"origin":"ja","rich":true},{"id":"V-sion-04","member":"시온","ja":"なんか合間に休みも多くて","rd":"なんかあいまにやすみもおおくて","ro":"nanka aima ni yasumi mo ookute","ko":"뭔가 중간중간 쉬는 시간도 많아서","keys":["合間: 틈, 사이사이","多くて: い형용사 て형 (이유)"],"grammar":"","sit":"일정이 여유로웠다고 말할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"3:25"},"origin":"ja","rich":true},{"id":"V-sion-05","member":"시온","ja":"ヒーリングしました","rd":"ヒーリングしました","ro":"hiiringu shimashita","ko":"힐링했어요","keys":["외래어 + する 동사","～ました: 정중 과거"],"grammar":"","sit":"휴식 소감을 정중하게 말할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"3:31"},"origin":"ja","rich":true},{"id":"V-sion-07","member":"시온","ja":"まぁ、なんていうか","rd":"まぁ、なんていうか","ro":"maa, nante iu ka","ko":"뭐.. 뭐랄까..","keys":["なんていうか: '뭐랄까' (말을 고를 때 쓰는 필러)"],"grammar":"","sit":"할 말을 고르며 시간을 벌 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"4:48"},"origin":"ja","rich":true},{"id":"V-sion-08","member":"시온","ja":"知らんけど","rd":"しらんけど","ro":"shiran kedo","ko":"모르겠지만~","keys":["간사이식 말버릇: 말 끝에 붙여 '책임은 못 짐' 뉘앙스","知らん = 知らない"],"grammar":"","sit":"자신 없는 말 뒤에 농담처럼 붙일 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"4:51"},"origin":"ja","rich":true},{"id":"V-sion-09","member":"시온","ja":"へえっ…！うわ！これやばいやん","rd":"へえっ…！うわ！これやばいやん","ro":"hee...! uwa! kore yabai yan","ko":"헉! 우와! 이거 장난 아니다","keys":["やばい: 대단하다/큰일이다","やん: 간사이벤 じゃん"],"grammar":"","sit":"놀라운 걸 봤을 때 리액션","lvl":"초급","cat":"","src":{"kind":"fan","ts":"4:56"},"origin":"ja","rich":true},{"id":"V-sion-10","member":"시온","ja":"サク、全部食った？","rd":"サク、ぜんぶくった？","ro":"saku, zenbu kutta?","ko":"사쿠, 다 먹었어?","keys":["食った = 食べた의 남성적 구어","サク: 사쿠야의 애칭"],"grammar":"","sit":"친구에게 가볍게 확인할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"4:58"},"origin":"ja","rich":true},{"id":"V-jaehee-03","member":"재희","ja":"漢字が分からなくてもおかしくないよ！","rd":"かんじがわからなくてもおかしくないよ！","ro":"kanji ga wakaranakute mo okashikunai yo!","ko":"한자를 모를 수도 있지!","keys":["～てもおかしくない: '~해도 이상하지 않다'","分からなくて: 부정 て형"],"grammar":"","sit":"놀림받았을 때 변명하기","lvl":"중급","cat":"","src":{"kind":"fan","ts":"9:52"},"origin":"ja","rich":true},{"id":"V-jaehee-04","member":"재희","ja":"それしながら、眠れました。ベッドの上で","rd":"それしながら、ねむれました。ベッドのうえで","ro":"sore shinagara, nemuremashita. beddo no ue de","ko":"그거 하다가 잠들었어요, 침대 위에서","keys":["～ながら: '~하면서'","도치: 장소(ベッドの上で)를 뒤에 덧붙임"],"grammar":"","sit":"근황을 이야기할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"10:06"},"origin":"ja","rich":true},{"id":"V-jaehee-05","member":"재희","ja":"あるの？日本にもこういう言葉が？","rd":"あるの？にほんにもこういうことばが？","ro":"aru no? nihon ni mo kou iu kotoba ga?","ko":"있어? 일본에도 이런 말이?","keys":["도치: 술어(あるの)를 먼저 말함","こういう: '이런'"],"grammar":"","sit":"모르는 표현을 질문할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"11:10"},"origin":"ja","rich":true},{"id":"V-jaehee-06","member":"재희","ja":"なんだ、またリョウなの？","rd":"なんだ、またリョウなの？","ro":"nanda, mata ryou na no?","ko":"뭐야, 또 료야?","keys":["なんだ: '뭐야' (실망·김샘)","また: 또"],"grammar":"","sit":"같은 결과가 반복될 때 리액션","lvl":"초급","cat":"","src":{"kind":"fan","ts":"12:43"},"origin":"ja","rich":true},{"id":"V-jaehee-07","member":"재희","ja":"リベンジって何だと思う？","rd":"リベンジってなんだとおもう？","ro":"ribenji tte nan da to omou?","ko":"리벤지가 뭐라고 생각해?","keys":["～って: 화제 제시 (～とは의 구어)","～と思う？: '~라고 생각해?'"],"grammar":"","sit":"질문을 되받아 장난칠 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"12:51"},"origin":"ja","rich":true},{"id":"V-jaehee-08","member":"재희","ja":"タメ口…？","rd":"ためぐち…？","ro":"tameguchi...?","ko":"반말…?","keys":["タメ口: 반말 (동갑·친구에게 쓰는 말투)"],"grammar":"","sit":"모르는 단어를 되물을 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"13:31"},"origin":"ja","rich":true},{"id":"V-jaehee-09","member":"재희","ja":"今緊張しているんですが","rd":"いまきんちょうしているんですが","ro":"ima kinchou shite iru n desu ga","ko":"지금 긴장하고 있는데요","keys":["～んですが: 말을 꺼내는 정중한 서두","緊張する: 긴장하다"],"grammar":"","sit":"공식 자리에서 소감을 시작할 때","lvl":"중급","cat":"","src":{"kind":"fan","ts":"14:31"},"origin":"ja","rich":true},{"id":"V-jaehee-10","member":"재희","ja":"それがちょっと大変でしたけど","rd":"それがちょっとたいへんでしたけど","ro":"sore ga chotto taihen deshita kedo","ko":"그게 좀 힘들긴 했는데요","keys":["大変: 힘들다, 고생스럽다","～けど: 역접·말끝 흐리기"],"grammar":"","sit":"어려웠던 경험을 정중하게 말할 때","lvl":"초급","cat":"","src":{"kind":"fan","ts":"14:43"},"origin":"ja","rich":true}];
+  MOMENTS.splice(2, 0, ...RICH);
+  const kindOf = x => x.rich ? x.src.kind : x.brief ? 'excerpt' : 'article';
+  let kind = 'all';
+  const STYLES = [
+    { s:'〜じゃん', rd:'jan', mean:'~잖아, ~네 (새삼 확인·감탄)', form:'친한 사이', text:'〜ではないか / 〜でしょう', ex:['このカフェ、めっちゃいいじゃん!','이 카페 완전 좋잖아!'] },
+    { s:'〜だよね', rd:'da yo ne', mean:'~지?, ~잖아 (공감 구하기)', form:'일상 · 정중형 〜ですよね', text:'〜ですね', ex:['今日のステージ、最高だったよね。','오늘 무대 최고였지?'], linked:'WM001' },
+    { s:'〜かな', rd:'ka na', mean:'~려나, ~일까 (혼잣말처럼 부드럽게)', form:'일상', text:'〜でしょうか', ex:['次のライブ、行けるかな。','다음 라이브 갈 수 있으려나.'] },
+    { s:'めっちゃ', rd:'meccha', mean:'완전, 엄청 (간사이 사투리에서 퍼진 강조어)', form:'친한 사이', text:'とても / すごく', ex:['新曲、めっちゃ好き!','신곡 완전 좋아!'] }
+  ];
+  const CUES = [
+    { t:'0:42', p:28, w:'夢', r:'ゆめ · yume', m:'꿈. 夢を見る는 꿈을 꾸다' },
+    { t:'1:15', p:46, w:'一緒に', r:'いっしょに · issho ni', m:'함께. 一緒に行こう! 같이 가자!' },
+    { t:'2:03', p:70, w:'届けたい', r:'とどけたい · todoketai', m:'전하고 싶어. 届ける(전하다) + たい(~하고 싶다)' }
+  ];
+  const CATS = [['all','전체'],['fandom','덕질'],['emotion','감정'],['sns','SNS'],['concert','콘서트'],['letter','팬레터'],['daily','일상']];
+  const DICT = [
+    {l:'ja',c:'fandom',e:'推し',r:'おし · oshi',m:'최애',cp:'한국어로는 최애'},
+    {l:'ja',c:'fandom',e:'推し活',r:'おしかつ · oshikatsu',m:'덕질, 최애 응원 활동',cp:'한국어로는 덕질'},
+    {l:'ja',c:'fandom',e:'同担',r:'どうたん · doutan',m:'같은 멤버를 좋아하는 팬',cp:'최애가 같은 사람'},
+    {l:'ja',c:'fandom',e:'沼',r:'ぬま · numa',m:'빠져나올 수 없는 덕질의 늪',cp:'입덕해서 못 나옴'},
+    {l:'ja',c:'emotion',e:'尊い',r:'とうとい · toutoi',m:'너무 소중해서 벅차오름',cp:'한국어 느낌은 존귀해, 숨 막혀'},
+    {l:'ja',c:'emotion',e:'めっちゃ好き',r:'めっちゃすき · meccha suki',m:'완전 좋아',cp:'친한 사이·SNS에서'},
+    {l:'ja',c:'sns',e:'リプ',r:'りぷ · ripu',m:'답글 (リプライ의 줄임)',cp:'X의 답글'},
+    {l:'ja',c:'sns',e:'無言フォロー失礼します',r:'むごんフォローしつれいします',m:'말없이 팔로우해서 실례해요',cp:'일본 X에서 자주 쓰는 인사'},
+    {l:'ja',c:'concert',e:'参戦',r:'さんせん · sansen',m:'콘서트·행사에 가는 것',cp:'한국어로는 콘서트 간다'},
+    {l:'ja',c:'concert',e:'トレカ交換',r:'とれかこうかん · toreka koukan',m:'포카 교환',cp:'포카는 일본에서 トレカ'},
+    {l:'ja',c:'letter',e:'いつも応援しています',r:'いつもおうえんしています',m:'항상 응원하고 있어요',cp:'팬레터 마무리 단골 문장'},
+    {l:'ja',c:'daily',e:'無理しないでね',r:'むりしないでね · muri shinaide ne',m:'무리하지 마',cp:'다정한 걱정의 말'},
+    {l:'ko',c:'fandom',e:'최애',r:'チェエ · choeae',m:'推し',cp:'日本語では 推し'},
+    {l:'ko',c:'fandom',e:'덕질',r:'トクチル · deokjil',m:'推し活',cp:'日本語では 推し活'},
+    {l:'ko',c:'daily',e:'수고했어',r:'スゴヘッソ · sugohaesseo',m:'お疲れさま',cp:'친한 사이의 반말'},
+    {l:'ko',c:'emotion',e:'보고 싶어',r:'ポゴシポ · bogo sipeo',m:'会いたい',cp:'친한 사이의 반말'}
+  ];
+  const ROOMS = [
+    { id:'concert', t:'콘서트에서 처음 만났을 때', s:'はじめまして!誰推しですか?', lines:[
+      ['jp','はじめまして!誰推しですか?','처음 뵙겠습니다! 누구 최애예요?'],
+      ['kr','はじめまして!〇〇推しです。韓国から来ました!','처음 뵙겠습니다! ○○ 최애예요. 한국에서 왔어요!'],
+      ['jp','え、韓国から!?すごい!一緒に楽しみましょう!','헉, 한국에서요!? 대단해요! 같이 즐겨요!'],
+      ['kr','ありがとうございます!あとでフォローしてもいいですか?','고마워요! 이따 팔로우해도 될까요?']],
+      tip:'처음 만난 팬에게는 です·ます 정중체가 기본이에요. 친해지면 자연스럽게 반말로 넘어가요.' },
+    { id:'trade', t:'포카 교환', s:'トレカ、交換できますか?', lines:[
+      ['kr','こんにちは!〇〇のトレカ、交換できますか?','안녕하세요! ○○ 포카 교환 가능할까요?'],
+      ['jp','はい!何と交換希望ですか?','네! 뭐랑 교환 원하세요?'],
+      ['kr','△△のトレカを出せます!','△△ 포카 드릴 수 있어요!'],
+      ['jp','いいですね!ぜひお願いします!','좋아요! 꼭 부탁해요!']],
+      tip:'일본에서는 포카를 トレカ라고 불러요. 出せます는 내놓을 수 있다, 즉 드릴 수 있다는 뜻이에요.' },
+    { id:'x', t:'X에서 대화하기', s:'今日の配信、見ました?', lines:[
+      ['jp','今日の配信、見ました?','오늘 방송 봤어요?'],
+      ['kr','見ました!めっちゃかわいかったですよね。','봤어요! 완전 귀여웠죠.'],
+      ['jp','ほんとそれ!','진짜 그거!'],
+      ['kr','次の配信も一緒に見ましょう!','다음 방송도 같이 봐요!']],
+      tip:'めっちゃ 같은 회화 단어에 ですよね를 붙이면, 친근하지만 예의 있는 SNS 말투가 돼요.' },
+    { id:'letter', t:'팬레터 쓰기', s:'いつも素敵な音楽をありがとう。', lines:[
+      ['kr','いつも素敵な音楽をありがとう。','항상 멋진 음악 고마워요.'],
+      ['kr','日本語もちょっとずつ勉強しています。','일본어도 조금씩 공부하고 있어요.'],
+      ['kr','無理しないでね。','무리하지 마요.'],
+      ['kr','ずっと応援しています!','계속 응원할게요!']],
+      tip:'두 번째 문장은 WISH MOMENTS 속 재희의 말투(ちょっとずつ, 〜ています)를 그대로 빌려 썼어요.' }
+  ];
+  const DAILY = [
+    {w:'楽しみ!',rd:'たのしみ · tanoshimi',m:'기대돼!',when:'컴백·콘서트 소식에 답글로',ex:['新曲、めっちゃ楽しみ!','신곡 완전 기대돼!']},
+    {w:'お疲れさま',rd:'おつかれさま · otsukaresama',m:'수고했어',when:'방송·공연이 끝난 뒤 인사로',ex:['今日もお疲れさま!','오늘도 수고했어!']},
+    {w:'無理しないでね',rd:'むりしないでね · muri shinaide ne',m:'무리하지 마',when:'바쁜 일정이 이어질 때 걱정하며',ex:['忙しいと思うけど、無理しないでね。','바쁘겠지만 무리하지 마.']},
+    {w:'会えてうれしい',rd:'あえてうれしい · aete ureshii',m:'만나서 기뻐',when:'콘서트·팬미팅에서 만난 팬에게',ex:['今日は会えてうれしかったです!','오늘 만나서 기뻤어요!']},
+    {w:'よろしくね',rd:'よろしくね · yoroshiku ne',m:'잘 부탁해',when:'새로 알게 된 팬 친구에게',ex:['同担さん、よろしくね!','같은 최애 친구, 잘 부탁해!']},
+    {w:'また会おうね',rd:'またあおうね · mata aou ne',m:'또 만나자',when:'헤어질 때, 다음을 약속하며',ex:['次のライブでまた会おうね!','다음 라이브에서 또 만나자!']},
+    {w:'ほんとそれ',rd:'ほんとそれ · honto sore',m:'진짜 그거, 완전 공감',when:'X에서 공감 답글로',ex:['ほんとそれ!今日の衣装、最高だった。','진짜 그거! 오늘 의상 최고였어.']}
+  ];
+
+  /* ---------- moments ---------- */
+  let member = '전체';
+  function renderFolders(){
+    const counts = m => MOMENTS.filter(x => m === '전체' || x.member === m).length;
+    $('#folders').innerHTML = ['전체', ...MEMBERS].map(m =>
+      `<button type="button" class="folder" aria-pressed="${m === member}" data-m="${m}">
+        ${SLUG[m] ? `<img class="slot" src="member-${SLUG[m]}.png" alt="">` : ''}<svg width="26" height="21" aria-hidden="true" style="color:var(--pink)"><use href="#i-folder"/></svg>${m}<span class="c">${counts(m)}</span></button>`).join('');
+  }
+  let shown = 6;
+  function renderMoments(){
+    const list = MOMENTS.filter(x => (member === '전체' || x.member === member) && (kind === 'all' || kindOf(x) === kind));
+    const dt = d => String(d).slice(0,10).replaceAll('-','.');
+    const srcLine = x => x.rich ? (x.src.kind === 'article' ? `${esc(x.src.pub)} · ${dt(x.src.date)}` : x.src.kind === 'broadcast' ? `일본 TV 방송 · ${dt(x.src.date)}` : '영상 자막 · 원 출처 확인 중') : x.brief ? '인터뷰 기사 발췌 · 출처 확인 중' : `${esc(x.source)} · ${x.date.replaceAll('-','.')}`;
+    const points = x => x.rich ? `<span class="tag ja">${esc(x.lvl)}</span>${x.cat ? `<span class="tag">${esc(x.cat)}</span>` : ''}` : x.brief ? `<span class="tag ja" lang="ja">${esc(x.pt)}</span>` : x.styles.map(s => `<span class="tag ja" lang="ja">${esc(s)}</span>`).join('');
+    const more = $('#more');
+    more.hidden = list.length <= shown;
+    more.textContent = `더 보기 (${Math.max(list.length - shown, 0)}개 남음)`;
+    $('#mgrid').innerHTML = list.length ? list.slice(0, shown).map(x => `
+      <button type="button" class="mcard" data-id="${x.id}">
+        <span class="src"><span class="k">${({article:'ARTICLE',broadcast:'TV',fan:'CLIP',excerpt:'ARTICLE'})[kindOf(x)]}</span>${srcLine(x)}</span>
+        <q lang="ja">${esc(x.ja)}</q>
+        <p class="ko">${esc(x.ko)}</p>
+        <span class="tags"><span class="tag pink">${esc(x.member)}</span>${x.origin === 'check' ? '<span class="tag">원어 확인 중</span>' : ''}${points(x)}</span>
+      </button>`).join('')
+      : `<div class="empty">${esc(member)}의 일본어 발언은 아직 수집 중이에요. 공식 인터뷰나 방송에서 찾은 발언이 있다면 출처와 함께 알려 주세요.</div>`;
+  }
+  $('#folders').addEventListener('click', e => {
+    const b = e.target.closest('.folder'); if (!b) return;
+    member = b.dataset.m; shown = 6; renderFolders(); renderMoments();
+  });
+  $('#more').addEventListener('click', () => { shown += 6; renderMoments(); });
+  $('#kinds').addEventListener('click', e => {
+    const b = e.target.closest('.chip'); if (!b) return;
+    kind = b.dataset.k; shown = 6;
+    document.querySelectorAll('#kinds .chip').forEach(c => c.setAttribute('aria-pressed', c === b));
+    renderMoments();
+  });
+  const dlg = $('#dlg');
+  $('#mgrid').addEventListener('click', e => {
+    const b = e.target.closest('.mcard'); if (!b) return;
+    const x = MOMENTS.find(m => m.id === b.dataset.id);
+    $('#dlg-title').textContent = `${x.id.toLowerCase()}.txt`;
+    const originNote = x.origin === 'check' ? `<div class="box"><h4>원어 확인 중</h4><p>한국인 멤버의 발언은 일본 매체가 한국어 답변을 번역해 실었을 수 있어요. 멤버가 직접 일본어로 말한 것인지 확인하고 있어요.</p></div>` : '';
+    if (x.rich) {
+      const s = x.src, dt = d => String(d).slice(0,10).replaceAll('-','.');
+      const srcBox = s.kind === 'article'
+        ? `<div class="src-box"><span class="badge">기사 원문 확인</span><b>${esc(s.pub)}</b><span lang="ja">${esc(s.title)}</span><span>${dt(s.date)}</span><a class="btn sm ghost" style="justify-self:start;margin-top:6px" href="${esc(s.url)}" target="_blank" rel="noopener">기사 원문 보기</a></div>`
+        : s.kind === 'broadcast'
+        ? `<div class="src-box"><span class="badge">TV 방송 · 공식 클립 확인 중</span><b>일본 TV 방송</b><span>${dt(s.date)} 방송${s.ts ? ` · 약 ${esc(s.ts)} 지점` : ''}</span><span>공식 클립을 찾으면 그 장면부터 재생되도록 연결할게요.</span></div>`
+        : `<div class="src-box"><span class="badge">영상 자막 기준</span><b>원 출처 확인 중</b><span>멤버의 라디오·라이브·방송 장면을 모은 영상의 자막과 대조했어요. 원래 방송과 음성 대조는 진행 중이에요.</span></div>`;
+      $('#dlg-body').innerHTML = `
+      <div class="quote">
+        <div class="rd" lang="ja">${esc(x.rd)}</div>
+        <div class="ja" lang="ja">${esc(x.ja)}</div>
+        <button type="button" class="btn sm ghost say" data-say="${esc(x.ja)}" style="margin-top:10px">발음 듣기 · 기계 음성</button>
+        <div class="ko">${esc(x.ko)}</div>
+        <div class="rd" style="margin-top:4px">${esc(x.ro)}</div>
+        <div style="margin-top:8px" class="tags"><span class="tag pink">${esc(x.member)}</span><span class="tag ja">${esc(x.lvl)}</span>${x.cat ? `<span class="tag">${esc(x.cat)}</span>` : ''}</div>
+      </div>
+      ${x.sit ? `<div class="box butter"><h4>어떤 상황이었나요</h4><p>${esc(x.sit)}</p></div>` : ''}
+      <div class="box sky"><h4>핵심 표현</h4><ul>${x.keys.map(k => `<li>${esc(k)}</li>`).join('')}</ul></div>
+      ${x.grammar ? `<div class="box lav"><h4>문법</h4><p>${esc(x.grammar)}</p></div>` : ''}
+      ${originNote}
+      ${srcBox}`;
+      if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open','');
+      return;
+    }
+    if (x.brief) {
+      $('#dlg-body').innerHTML = `
+      <div class="quote">
+        <div class="rd" lang="ja">${esc(x.rd)}</div>
+        <div class="ja" lang="ja">${esc(x.ja)}</div>
+        <button type="button" class="btn sm ghost say" data-say="${esc(x.ja)}" style="margin-top:10px">발음 듣기 · 기계 음성</button>
+        <div class="ko">${esc(x.ko)}</div>
+        <div style="margin-top:8px" class="tags"><span class="tag pink">${esc(x.member)}</span></div>
+      </div>
+      <div class="box sky"><h4>학습 포인트 <span lang="ja">${esc(x.pt)}</span></h4><p>${esc(x.note)}</p></div>
+      ${originNote}
+      <div class="src-box"><span class="badge">글 출처 · 영상 없음</span><b>인터뷰 기사 발췌</b><span>출처 후보: ${x.src.map(esc).join(', ')}</span><span>항목별 출처와 날짜는 확인되는 대로 추가돼요.</span>${x.dup ? `<span>${esc(x.dup)}</span>` : ''}</div>`;
+      if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open','');
+      return;
+    }
+    $('#dlg-body').innerHTML = `
+      <div class="src-box">
+        <span class="badge">${x.format === 'VIDEO' ? '공식 영상' : '글 출처 · 영상 없음'}</span>
+        <b>${esc(x.source)}</b>
+        <span>${esc(x.type)} · ${x.date.replaceAll('-','.')}</span>
+        <a class="btn sm ghost" style="justify-self:start;margin-top:6px" href="${esc(x.url)}" target="_blank" rel="noopener">기사 원문 보기</a>
+      </div>
+      <div class="quote">
+        <div class="rd" lang="ja">${esc(x.rd)}</div>
+        <div class="ja" lang="ja">${esc(x.ja)}</div>
+        <button type="button" class="btn sm ghost say" data-say="${esc(x.ja)}" style="margin-top:10px">발음 듣기 · 기계 음성</button>
+        <div class="ko">${esc(x.ko)}</div>
+        <div style="margin-top:8px" class="tags"><span class="tag pink">${esc(x.member)}</span></div>
+      </div>
+      ${originNote}
+      <div class="box sky"><h4>핵심 어휘</h4><ul>${x.vocab.map(v => `<li><span lang="ja">${esc(v[0])}</span> (<span lang="ja">${esc(v[1])}</span>) ${esc(v[2])}</li>`).join('')}</ul></div>
+      <div class="box"><h4>문법</h4><ul>${x.grammar.map(g => `<li>${esc(g)}</li>`).join('')}</ul></div>
+      <div class="box lav"><h4>말투와 뉘앙스</h4><p>${esc(x.tone)}</p><p style="margin-top:6px">반말로는 <span lang="ja">${esc(x.casual)}</span></p></div>
+      <div class="box butter"><h4>이렇게 써 보세요</h4><ul>${x.ex.map(v => `<li><span lang="ja">${esc(v[0])}</span><br>${esc(v[1])}</li>`).join('')}</ul></div>
+      <div class="chips">${x.styles.map(s => `<a class="tag ja" lang="ja" href="#styles">${esc(s)}</a>`).join('')}</div>`;
+    if (typeof dlg.showModal === 'function') dlg.showModal(); else dlg.setAttribute('open','');
+  });
+  /* 발음 듣기: 브라우저 내장 일본어 음성(멤버 목소리 아님) */
+  function speak(text){
+    if (!('speechSynthesis' in window)) { snack('이 브라우저는 음성 재생을 지원하지 않아요'); return; }
+    speechSynthesis.cancel();
+    const u = new SpeechSynthesisUtterance(text.replace(/[〇△]+/g, ''));
+    u.lang = 'ja-JP'; u.rate = 0.9;
+    const v = speechSynthesis.getVoices().find(v => (v.lang || '').toLowerCase().startsWith('ja'));
+    if (v) u.voice = v; else snack('일본어 음성이 없으면 기기 설정에서 일본어 음성을 추가해 주세요');
+    speechSynthesis.speak(u);
+  }
+  if ('speechSynthesis' in window) speechSynthesis.getVoices();
+  $('#dlg-body').addEventListener('click', e => { const b = e.target.closest('.say'); if (b) speak(b.dataset.say); });
+  dlg.addEventListener('close', () => { if ('speechSynthesis' in window) speechSynthesis.cancel(); });
+  $('#dlg-close').addEventListener('click', () => dlg.close());
+  dlg.addEventListener('click', e => { if (e.target === dlg) dlg.close(); });
+  dlg.addEventListener('click', e => { if (e.target.closest('a[href="#styles"]')) dlg.close(); });
+
+  /* ---------- styles ---------- */
+  $('#profiles').innerHTML = STYLES.map(x => `
+    <article class="win profile" data-accent="lav">
+      <div class="bar"><span class="ttl" lang="ja">${esc(x.s)}</span><span class="ctl" aria-hidden="true"><i>×</i></span></div>
+      <div class="body">
+        <div class="big" lang="ja">${esc(x.s)}</div>
+        <dl><dt>읽기</dt><dd>${esc(x.rd)}</dd><dt>뜻</dt><dd>${esc(x.mean)}</dd><dt>관계</dt><dd>${esc(x.form)}</dd><dt>교과서</dt><dd lang="ja">${esc(x.text)}</dd></dl>
+        <div class="ex"><span lang="ja">${esc(x.ex[0])}</span>${esc(x.ex[1])}</div>
+        ${x.linked ? `<div class="linked">재희의 발언에서 정중형 〜ですよね로 등장</div>` : ''}
+      </div>
+    </article>`).join('');
+
+  /* ---------- song lab ---------- */
+  const ALBUMS = [
+    ['WISHFUL', ['Wishful Winter','FAR AWAY','We Go!','Touchdown','CHOO CHOO','NASA']],
+    ['WISHLIST', ['Hello Mellow','ZONE','BUBBLE GUM','Dreamcatcher','SOMEDAY','Good Morning']]
+  ];
+  let song = ['WISHFUL','Wishful Winter'];
+  const ytm = t => 'https://music.youtube.com/search?q=' + encodeURIComponent('NCT WISH ' + t);
+  function renderAlbums(){
+    $('#albums').innerHTML = ALBUMS.map(([al, list]) => `<div class="album"><h3>${al}</h3><div class="chips">${list.map(t => `<button type="button" class="chip" data-al="${al}" data-t="${esc(t)}" aria-pressed="${song[1] === t}">${esc(t)}</button>`).join('')}</div></div>`).join('');
+    $('#ytm').href = ytm(song[1]);
+    $('#ytm').textContent = `${song[1]} · YouTube Music에서 듣기 · 공식 가사`;
+    renderScreen();
+  }
+  /* 공식 영상 ID를 넣으면 플레이어 안에서 바로 재생돼요. 예: 'Wishful Winter': 'VIDEO_ID' */
+  const VIDS = {
+    'Wishful Winter': 'NAhEwvI9TGE',
+    'FAR AWAY': 'F6z5pFEoSSs',
+    'We Go!': 'gMxXljBBjI8',
+    'Touchdown': 'Gwes7rTpoRY',
+    'CHOO CHOO': 'yA1r0U-nojg',
+    'NASA': 'noGjEgZ15PM',
+    'Hello Mellow': '8s23tBtQciU',
+    'ZONE': 'HdnUliKQSCo',
+    'BUBBLE GUM': 'dhLzkb0tcN0',
+    'Dreamcatcher': 'UulR1x4tvZE',
+    'SOMEDAY': 'M2PZUOQDNrc',
+    'Good Morning': 'n4hfPv-tJuI'
+  };
+  let placeholder = null;
+  const toSec = t => t.split(':').reduce((a, n) => a * 60 + Number(n), 0);
+  function renderScreen(start){
+    const scr = $('#screen'); if (placeholder === null) placeholder = scr.innerHTML;
+    scr.innerHTML = placeholder;
+    $('#song-title').textContent = `${song[0]} · ${song[1]}`;
+  }
+  $('#albums').addEventListener('click', e => { const b = e.target.closest('.chip'); if (!b) return; song = [b.dataset.al, b.dataset.t]; cue = -1; renderAlbums(); renderCues(); });
+  /* 곡별 표현 카드: { t:'0:42', w:'짧은 표현', r:'읽기', m:'뜻·해설', lang:'ja' } — 가사 전체가 아닌 핵심 표현만 */
+  const SONG_CUES = {
+    'Wishful Winter': [
+      { t:'0:38', w:'鐘の音', r:'かねのおと · kane no oto', m:'종소리. 鐘(종) + の + 音(소리). 결합해서 하나의 단어처럼 써요.' },
+      { t:'0:43', w:'ふと', r:'ふと · futo', m:'문득, 무심코. ふと見上げる(문득 올려다보다)처럼 동사 앞에 붙여요.' },
+      { t:'0:47', w:'叶うかな', r:'かなうかな · kanau kana', m:'이루어질까. 叶う(소원이 이루어지다) + かな(혼잣말 같은 궁금함). 말투 도감의 〜かな와 같은 말투예요.' },
+      { t:'1:02', w:'照らそう', r:'てらそう · terasou', m:'비추자. 照らす(비추다)의 의지형. 〜しよう 꼴은 ~하자라는 제안이에요.' },
+      { t:'1:04', w:'ねぇ', r:'ねぇ · nee', m:'있잖아, 저기. 친한 사람을 부르거나 말을 건낼 때 써요.' },
+      { t:'1:08', w:'いつかきっと', r:'いつかきっと · itsuka kitto', m:'언젠가 분명. 팬레터에 いつかきっと会えるよね!(언젠가 꼭 만날 수 있겠지!)처럼 써요.' },
+      { t:'1:15', w:'響かせよう', r:'ひびかせよう · hibikaseyou', m:'울려 퍼지게 하자. 響く(울리다) → 響かせる(울리게 하다, 사역형) → 의지형.' },
+      { t:'1:42', w:'溶かす', r:'とかす · tokasu', m:'녹이다. 溶ける는 저절로 녹는 것, 溶かす는 무언가를 녹이는 것이에요.' },
+      { t:'1:51', w:'一人だけじゃ', r:'ひとりだけじゃ · hitori dake ja', m:'혼자서만으로는. じゃ는 では의 회화체로, 뒤에 부정이 와요.' },
+      { t:'2:21', w:'分け合って', r:'わけあって · wakeatte', m:'서로 나눠. 分ける(나누다) + 合う(서로) = 함께 나누어 갖다.' },
+      { t:'2:24', w:'揺らして', r:'ゆらして · yurashite', m:'흔들어. 揺れる(흔들리다)와 揺らす(흔들다)를 짝으로 기억해요.' },
+      { t:'2:31', w:'距離を縮めて', r:'きょりをちぢめて · kyori o chijimete', m:'거리를 좁혀. 縮める는 줄이다. WISH MOMENTS 속 리쿠의 距離が近くなった와 함께 보면 좋아요.' }
+    ]
+  };
+  let cue = -1;
+  function renderCues(){
+    const list = SONG_CUES[song[1]] || [];
+    $('#cue-meta').textContent = list.length ? (list.every(q => q.t) ? '재생에 맞춰 카드가 하나씩 밝아져요. 카드를 누르면 그 장면부터 재생돼요.' : '곡 속 핵심 표현이에요. 장면 시간이 연결되면 재생에 맞춰 카드가 밝아져요.') : '이 곡의 표현 카드를 준비하고 있어요.';
+    $('#cues').innerHTML = list.length ? list.map((c,i) => `
+      <button type="button" class="cue" aria-pressed="${i === cue}" data-i="${i}">
+        <span class="tm">${esc(c.t || '--:--')}</span><span class="w" lang="${c.lang || 'ja'}">${esc(c.w)}</span><span class="r">${esc(c.r)}</span><span class="m">${esc(c.m)}</span>
+      </button>`).join('')
+      : `<div class="empty">곡을 들으며 배울 만한 표현을 카드로 정리하고 있어요. 공식 가사는 위 버튼으로 YouTube Music에서 볼 수 있어요.</div>`;
+    const c = list[cue];
+    const now = $('#now'); if (now) now.textContent = c ? `${c.t} 장면` : '재생 대기';
+    $('#tt').textContent = c ? c.t : '0:00';
+  }
+  $('#cues').addEventListener('click', e => { const b = e.target.closest('.cue'); if (!b) return; cue = +b.dataset.i; renderCues(); const q = (SONG_CUES[song[1]] || [])[cue]; if (q && q.t && VIDS[song[1]]) playTitle(song[1], toSec(q.t)); });
+
+  /* ---------- dictionary ---------- */
+  const st = { lang:'ja', cat:'all', q:'' };
+  $('#cats').innerHTML = CATS.map(([k,v]) => `<button type="button" class="chip" data-c="${k}" aria-pressed="${k === 'all'}">${v}</button>`).join('');
+  function renderDict(){
+    const q = st.q.trim().toLowerCase();
+    const list = DICT.filter(d => d.l === st.lang && (st.cat === 'all' || d.c === st.cat) &&
+      (!q || [d.e,d.r,d.m,d.cp].some(f => f.toLowerCase().includes(q))));
+    const catName = k => (CATS.find(c => c[0] === k) || [,''])[1];
+    $('#dgrid').innerHTML = list.length ? list.map(d => `
+      <article class="memo">
+        <div class="e" lang="${d.l === 'ja' ? 'ja' : 'ko'}">${esc(d.e)}</div>
+        <div class="r">${esc(d.r)}</div>
+        <div class="m" ${d.l === 'ko' ? 'lang="ja"' : ''}>${esc(d.m)}</div>
+        <div class="cp">${esc(d.cp)}</div>
+        <span class="tag ${d.l === 'ja' ? 'ja' : ''}">${catName(d.c)}</span>
+      </article>`).join('')
+      : `<div class="empty dempty">찾는 표현이 아직 없어요. 다른 단어로 검색하거나 카테고리를 전체로 바꿔 보세요.</div>`;
+  }
+  function setLang(l){
+    st.lang = l;
+    document.querySelectorAll('.seg button').forEach(b => b.setAttribute('aria-pressed', b.dataset.lang === l));
+    document.querySelectorAll('.lang-switch a').forEach(a => a.setAttribute('aria-current', a.dataset.learn === l));
+    renderDict();
+  }
+  document.querySelectorAll('.seg button').forEach(b => b.addEventListener('click', () => setLang(b.dataset.lang)));
+  document.querySelectorAll('[data-learn]').forEach(a => a.addEventListener('click', () => setLang(a.dataset.learn)));
+  $('#cats').addEventListener('click', e => {
+    const b = e.target.closest('.chip'); if (!b) return;
+    st.cat = b.dataset.c;
+    document.querySelectorAll('#cats .chip').forEach(c => c.setAttribute('aria-pressed', c === b));
+    renderDict();
+  });
+  $('#q').addEventListener('input', e => { st.q = e.target.value; renderDict(); });
+
+  /* ---------- real talk ---------- */
+  let room = 'concert';
+  function renderRooms(){
+    $('#rooms').innerHTML = ROOMS.map(r => `<button type="button" class="room" aria-pressed="${r.id === room}" data-r="${r.id}"><b>${esc(r.t)}</b><span lang="ja">${esc(r.s)}</span></button>`).join('');
+    const r = ROOMS.find(x => x.id === room);
+    $('#chat').innerHTML = r.lines.map(([who,ja,ko]) => `
+      <div class="msg ${who}"><span class="who">${who === 'kr' ? '한국 팬' : '<span lang="ja">日本のファン</span>'}</span>
+        <div class="bub"><span lang="ja">${esc(ja)}</span><span class="ko">${esc(ko)}</span></div></div>`).join('')
+      + `<div class="tip"><b>말투 팁</b>${esc(r.tip)}</div>`;
+  }
+  $('#rooms').addEventListener('click', e => { const b = e.target.closest('.room'); if (!b) return; room = b.dataset.r; renderRooms(); });
+
+  /* ---------- daily ---------- */
+  const now = new Date();
+  const dayNo = Math.floor(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()) / 864e5);
+  const today = DAILY[dayNo % DAILY.length];
+  const wk = ['일','월','화','수','목','금','토'];
+  const pad = n => String(n).padStart(2,'0');
+  $('#d-date').textContent = `${now.getFullYear()}.${pad(now.getMonth()+1)}.${pad(now.getDate())} (${wk[now.getDay()]})`;
+  $('#d-word').textContent = today.w;
+  $('#d-read').textContent = today.rd;
+  $('#d-mean').textContent = today.m;
+  $('#d-when').textContent = today.when;
+  $('#d-ex').innerHTML = `<span lang="ja">${esc(today.ex[0])}</span>${esc(today.ex[1])}`;
+  $('#toast-word').textContent = today.w;
+  $('#say-daily').addEventListener('click', () => speak(today.ex[0] ? today.w + '。' + today.ex[0] : today.w));
+  $('#share').href = 'https://x.com/intent/tweet?text=' + encodeURIComponent(`오늘의 일본어: ${today.w} (${today.m}) #WISHLANGUAGE`);
+
+  const KEY = 'wl-mywish';
+  const readSaved = () => { try { return JSON.parse(localStorage.getItem(KEY)) || []; } catch { return []; } };
+  const writeSaved = v => { try { localStorage.setItem(KEY, JSON.stringify(v)); return true; } catch { return false; } };
+  const saveBtn = $('#save');
+  const syncSave = () => { const on = readSaved().includes(today.w); saveBtn.textContent = on ? 'MY WISH에 저장됨' : 'MY WISH에 저장'; saveBtn.setAttribute('aria-pressed', on); };
+  saveBtn.addEventListener('click', () => {
+    let s = readSaved(); const on = s.includes(today.w);
+    s = on ? s.filter(w => w !== today.w) : [...s, today.w];
+    const ok = writeSaved(s);
+    snack(!ok ? '이 브라우저에서는 저장할 수 없어요' : on ? 'MY WISH에서 뺐어요' : 'MY WISH에 저장했어요');
+    syncSave();
+  });
+
+  let snackT;
+  function snack(t){ const el = $('#snack'); el.textContent = t; el.classList.add('on'); clearTimeout(snackT); snackT = setTimeout(() => el.classList.remove('on'), 1800); }
+
+  /* ---------- taskbar ---------- */
+  function tick(){ const d = new Date(); $('#clock').textContent = `${pad(d.getMonth()+1)}.${pad(d.getDate())} ${pad(d.getHours())}:${pad(d.getMinutes())}`; }
+  tick(); setInterval(tick, 30000);
+  const tabs = [...document.querySelectorAll('.tab')];
+  if ('IntersectionObserver' in window){
+    const io = new IntersectionObserver(es => es.forEach(en => {
+      if (en.isIntersecting) tabs.forEach(t => t.setAttribute('aria-current', t.dataset.sec === en.target.id));
+    }), { rootMargin:'-45% 0px -50% 0px' });
+    tabs.forEach(t => { const s = document.getElementById(t.dataset.sec); if (s) io.observe(s); });
+  }
+
+  /* ---------- mini player ---------- */
+  const TRACKS = ALBUMS.flatMap(([al, list]) => list.map(t => ({ album:al, title:t })));
+  const MP = { player:null, api:'idle', idx:-1, pending:null, timer:null, seeking:false };
+  const mini = $('#mini'), miniMsg = $('#mini-msg');
+  const fmt = n => { n = Math.max(0, Math.floor(n || 0)); return `${Math.floor(n / 60)}:${String(n % 60).padStart(2,'0')}`; };
+  const ICON_PLAY = '<path d="M5 3l11 6-11 6z" fill="currentColor"/>', ICON_PAUSE = '<path d="M5 3h3v12H5zM10 3h3v12h-3z" fill="currentColor"/>';
+  function setPlaying(on){ $('#mb-icon').innerHTML = on ? ICON_PAUSE : ICON_PLAY; $('#mb-play').setAttribute('aria-label', on ? '일시정지' : '재생'); }
+  function showMini(msg){ mini.hidden = false; miniMsg.hidden = !msg; miniMsg.textContent = msg || ''; }
+  function loadAPI(){
+    if (MP.api !== 'idle') return;
+    MP.api = 'loading';
+    const sc = document.createElement('script');
+    sc.src = 'https://www.youtube.com/iframe_api';
+    sc.onerror = () => { MP.api = 'blocked'; showMini('이 미리보기 화면에서는 YouTube를 불러올 수 없어요. 공개한 사이트에서는 여기서 바로 재생돼요.'); };
+    document.head.appendChild(sc);
+  }
+  window.onYouTubeIframeAPIReady = () => {
+    MP.api = 'ready';
+    const p = MP.pending || {};
+    MP.player = new YT.Player('mp-video', {
+      host:'https://www.youtube-nocookie.com', videoId:p.vid,
+      playerVars:{ rel:0, playsinline:1, start:p.start || 0, autoplay:1 },
+      events:{
+        onReady: e => e.target.playVideo(),
+        onStateChange: e => { setPlaying(e.data === 1); if (e.data === 0) step(1); }
+      }
+    });
+    clearInterval(MP.timer);
+    MP.timer = setInterval(() => {
+      const pl = MP.player; if (!pl || !pl.getDuration || MP.seeking) return;
+      const d = pl.getDuration(), c = pl.getCurrentTime();
+      $('#mb-cur').textContent = fmt(c); $('#mb-dur').textContent = fmt(d);
+      $('#mb-seek').value = d ? Math.round(c / d * 1000) : 0;
+      const tr = TRACKS[MP.idx];
+      if (tr && tr.title === song[1]) {
+        $('#track').style.width = (d ? c / d * 100 : 0) + '%';
+        const list = SONG_CUES[tr.title] || [];
+        let a = -1; list.forEach((q, i) => { if (q.t && toSec(q.t) <= c) a = i; });
+        if (list.length && a !== cue) {
+          cue = a; renderCues();
+          const el = document.querySelector(`#cues .cue[data-i="${a}"]`);
+          if (el) $('#cues').scrollTo({ top: el.offsetTop - 12 });
+        }
+      }
+    }, 500);
+  };
+  function playTrack(i, start){
+    const t = TRACKS[i]; if (!t) return;
+    MP.idx = i;
+    $('#mb-title').textContent = t.title;
+    $('#mb-sub').textContent = `NCT WISH · ${t.album}`;
+    const vid = VIDS[t.title];
+    if (!vid) { setPlaying(false); snack(`${t.title}의 공식 영상이 아직 연결되지 않았어요`); return; }
+    showMini();
+    if (MP.api === 'blocked') { showMini('이 미리보기 화면에서는 YouTube를 불러올 수 없어요. 공개한 사이트에서는 여기서 바로 재생돼요.'); return; }
+    if (MP.player && MP.player.loadVideoById) {
+      /* 같은 곡이면 새로 불러오지 않고 위치만 옮겨요 (광고가 다시 뜨는 일을 줄여요) */
+      if (MP.loaded === vid) { if (start != null) MP.player.seekTo(start, true); MP.player.playVideo(); }
+      else MP.player.loadVideoById({ videoId:vid, startSeconds:start || 0 });
+    }
+    else { MP.pending = { vid, start }; loadAPI(); }
+    MP.loaded = vid;
+  }
+  function playTitle(title, start){ playTrack(TRACKS.findIndex(t => t.title === title), start); }
+  function step(d){
+    const ids = TRACKS.map((t, i) => VIDS[t.title] ? i : -1).filter(i => i >= 0);
+    if (!ids.length) { snack('공식 영상이 연결된 곡이 아직 없어요'); return; }
+    const pos = ids.indexOf(MP.idx);
+    playTrack(ids[(pos + d + ids.length) % ids.length]);
+  }
+  $('#mb-play').addEventListener('click', () => {
+    const pl = MP.player;
+    if (pl && pl.getPlayerState && MP.idx >= 0) {
+      if (pl.getPlayerState() === 1) { pl.pauseVideo(); return; }
+      showMini(); pl.playVideo(); return;
+    }
+    playTitle(song[1]);
+  });
+  $('#mb-prev').addEventListener('click', () => step(-1));
+  $('#mb-next').addEventListener('click', () => step(1));
+  $('#mb-show').addEventListener('click', () => { if (MP.idx >= 0 && VIDS[TRACKS[MP.idx].title]) showMini(); else document.getElementById('song-lab').scrollIntoView(); });
+  $('#mini-min').addEventListener('click', () => { if (MP.player && MP.player.pauseVideo) MP.player.pauseVideo(); mini.hidden = true; });
+  $('#mini-close').addEventListener('click', () => { if (MP.player && MP.player.stopVideo) MP.player.stopVideo(); mini.hidden = true; setPlaying(false); });
+  const seek = $('#mb-seek');
+  seek.addEventListener('input', () => { MP.seeking = true; });
+  seek.addEventListener('change', () => { const pl = MP.player; if (pl && pl.getDuration) pl.seekTo(seek.value / 1000 * pl.getDuration(), true); MP.seeking = false; });
+  $('#screen').addEventListener('click', e => { if (e.target.closest('#screen-play')) playTitle(song[1]); });
+
+  /* 앱처럼 설치(PWA): 공개 주소(https)에서만 작동 */
+  if ('serviceWorker' in navigator && location.protocol === 'https:') navigator.serviceWorker.register('./sw.js').catch(() => {});
+  renderFolders(); renderMoments(); renderAlbums(); renderCues(); renderDict(); renderRooms(); syncSave();
+  $('#moments-badge').textContent = MOMENTS.length;
+})();
+</script>
+</body>
+</html>
